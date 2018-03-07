@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="ClientDataSet1NET" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="ClientDataSet1NET" msdata:IsDataSet="true" msdata:MainDataTable="ROW" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ROW">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustNo" type="xs:double" minOccurs="0" />
+              <xs:element name="Company" type="xs:string" minOccurs="0" />
+              <xs:element name="Addr1" type="xs:string" minOccurs="0" />
+              <xs:element name="Addr2" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="State" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip" type="xs:string" minOccurs="0" />
+              <xs:element name="Country" type="xs:string" minOccurs="0" />
+              <xs:element name="Phone" type="xs:string" minOccurs="0" />
+              <xs:element name="FAX" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxRate" type="xs:double" minOccurs="0" />
+              <xs:element name="Contact" type="xs:string" minOccurs="0" />
+              <xs:element name="LastInvoiceDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
