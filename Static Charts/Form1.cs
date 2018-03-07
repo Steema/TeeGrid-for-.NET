@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeeGrid.Format;
 using TeeGrid.Columns;
-using TeeGrid.Data.Rtti;
+using TeeGrid.Data.Reflection;
 
 namespace TeeGrid_Static_Charts
 {

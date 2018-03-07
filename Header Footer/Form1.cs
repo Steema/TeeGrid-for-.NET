@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeeGrid.Format;
 using TeeGrid.Bands;
-using TeeGrid.Data.Rtti;
+using TeeGrid.Data.Reflection;
 using TeeGrid.Painter;
 
 namespace TeeGrid_Header_Footer

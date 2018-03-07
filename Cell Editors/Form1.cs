@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using TeeGrid.Data.Rtti;
+using TeeGrid.Data.Reflection;
 using VirtualData;
 using TeeGrid.WinForm.Grid;
 

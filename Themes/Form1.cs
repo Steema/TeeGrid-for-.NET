@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeeGrid.Themes;
-using TeeGrid.Data.Rtti;
+using TeeGrid.Data.Reflection;
 using VirtualData;
 using TeeGrid.Painter;
 

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using TeeGrid.Bands;
 using TeeGrid.Columns;
 using TeeGrid.Data;
-using TeeGrid.Data.Rtti;
+using TeeGrid.Data.Reflection;
 using TeeGrid.Format;
 using TeeGrid.Renders;
 using TeeGrid.Rows;
