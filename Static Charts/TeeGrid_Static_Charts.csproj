@@ -43,8 +43,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TeeChart.Standard, Version=4.2018.1.23, Culture=neutral, PublicKeyToken=7d79220c74c907b6, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Steema.TeeChart.NET.Standard.4.2018.1.23\lib\net\TeeChart.Standard.dll</HintPath>
+    <Reference Include="TeeChart.Standard, Version=4.2018.3.5, Culture=neutral, PublicKeyToken=7d79220c74c907b6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\TCROOT\TeeBINET\Grid\packages\Steema.TeeChart.NET.Standard.4.2018.3.5\lib\net\TeeChart.Standard.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
