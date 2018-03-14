@@ -63,7 +63,7 @@ namespace TeeGrid_Custom_Sorting
 
 		private void SortBy(object sender, SortableColumnEventArgs e)
 		{
-			SortStateEventArgs args = new SortStateEventArgs() { Column = e.AColumn, State = TeeGrid.Header.SortState.None };
+			SortStateEventArgs args = new SortStateEventArgs() { Column = e.Column, State = TeeGrid.Header.SortState.None };
 			SortState(sender, args);
 
 			LastSorted.Ascending = args.State != TeeGrid.Header.SortState.Ascending;
