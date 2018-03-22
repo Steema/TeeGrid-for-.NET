@@ -136,8 +136,7 @@ namespace ClientDataSet
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			//jsGridExport.Export(tTeeGrid1.Grid, @"C:\tmp");
-			tTeeGrid1.Grid.ExportToDisk(TeeGrid.ExportFormat.jsGrid, @"C:\tmp");
+			tTeeGrid1.ExportToDisk(TeeGrid.ExportFormat.jsGrid, @"C:\tmp");
 		}
 	}
 
