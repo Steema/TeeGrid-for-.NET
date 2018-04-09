@@ -16,6 +16,7 @@ using TeeGrid.Format;
 using TeeGrid.Renders;
 using TeeGrid.Rows;
 using TeeGrid.Totals;
+using TeeGrid.WinForm.Editors;
 using VirtualData;
 
 namespace TeeGrid_Array_Data
@@ -33,17 +34,17 @@ namespace TeeGrid_Array_Data
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("No DesignTime Editors", "Ojo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			TeeGridEditor.Edit(teeGrid1);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("No DesignTime Editors", "Ojo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			GridBandsEditor.Edit(teeGrid1.Headers);
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("No DesignTime Editors", "Ojo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			GridBandsEditor.Edit(teeGrid1.Footer);
 		}
 
 		private List<Person> MyListData = new List<Person>();
