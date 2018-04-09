@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using TeeGrid.Format;
 using TeeGrid.Columns;
 using TeeGrid.Data.Reflection;
+using TeeGrid.WinForm.Editors;
 
 namespace TeeGrid_Static_Charts
 {
@@ -116,7 +117,7 @@ namespace TeeGrid_Static_Charts
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("No DesignTime Editors", "Ojo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			TeeGridEditor.Edit(tTeeGrid1);
 		}
 	}
 

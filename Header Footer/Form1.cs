@@ -11,6 +11,7 @@ using TeeGrid.Format;
 using TeeGrid.Bands;
 using TeeGrid.Data.Reflection;
 using TeeGrid.Painter;
+using TeeGrid.WinForm.Editors;
 
 namespace TeeGrid_Header_Footer
 {
@@ -53,12 +54,12 @@ namespace TeeGrid_Header_Footer
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("No DesignTime Editors", "Ojo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			GridBandsEditor.Edit(tTeeGrid1.Headers);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("No DesignTime Editors", "Ojo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			GridBandsEditor.Edit(tTeeGrid1.Footer);
 		}
 	}
 

@@ -12,6 +12,7 @@ using TeeGrid.Renders;
 using TeeGrid.Columns;
 using ClientDataSet.Resources;
 using TeeGrid.jsGrid;
+using TeeGrid.WinForm.Editors;
 
 namespace ClientDataSet
 {
@@ -126,7 +127,7 @@ namespace ClientDataSet
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("No DesignTime Editors", "Ojo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			TeeGridEditor.Edit(tTeeGrid1);
 		}
 
 		private void checkBox1_CheckedChanged(object sender, EventArgs e)
