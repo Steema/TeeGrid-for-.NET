@@ -21,6 +21,10 @@ namespace TeeGrid_WinForm_Master_Detail
 		{
 			InitializeComponent();
 
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.Flat.ApplyTo(teeGrid1.Grid);
+
+
 			// TODO: This line of code loads data into the 'fddemoDataSet.Customers' table. You can move, or remove it, as needed.
 			this.customersTableAdapter.Fill(this.fddemoDataSet.Customers);
 			// TODO: This line of code loads data into the 'fddemoDataSet.Orders' table. You can move, or remove it, as needed.

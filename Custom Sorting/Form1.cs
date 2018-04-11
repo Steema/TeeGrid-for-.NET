@@ -28,7 +28,8 @@ namespace TeeGrid_Custom_Sorting
 
 			teeGrid1.Header.Sortable = true;
 			teeGrid1.Header.SortRender = CreateSortable();
-
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.Flat.ApplyTo(teeGrid1.Grid);
 			teeGrid1.Data = new VirtualListData<Location>(Locations);
 		}
 

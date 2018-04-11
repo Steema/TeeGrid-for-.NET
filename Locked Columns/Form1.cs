@@ -18,6 +18,10 @@ namespace TeeGrid_Locked_Columns
 		{
 			InitializeComponent();
 
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
+			tTeeGrid1.Rows.RowLines.Visible = true;
+
 			Data = new StringsData(30, 100);
 
 			FillCells();

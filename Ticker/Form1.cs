@@ -13,6 +13,10 @@ namespace TeeGrid_WinForm_Ticker
 		{
 			InitializeComponent();
 
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
+
+
 			Data = new StringsData(5, 8);
 
 			tTeeGrid1.Data = Data;

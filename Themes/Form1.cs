@@ -20,6 +20,7 @@ namespace TeeGrid_Themes_WinForm
 		{
 			InitializeComponent();
 
+			this.BackColor = System.Drawing.Color.White;
 			CreateSampleData();
 
 			lbThemes.SelectedIndex = 0;
@@ -51,6 +52,18 @@ namespace TeeGrid_Themes_WinForm
 					break;
 				case 3:
 					GridThemes.Black.ApplyTo(tTeeGrid1.Grid);
+					break;
+				case 4:
+					GridThemes.BlueFlat.ApplyTo(tTeeGrid1.Grid);
+					break;
+				case 5:
+					GridThemes.SilverFlat.ApplyTo(tTeeGrid1.Grid);
+					break;
+				case 6:
+					GridThemes.DarkFlat.ApplyTo(tTeeGrid1.Grid);
+					break;
+				case 7:
+					GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
 					break;
 			}
 		}

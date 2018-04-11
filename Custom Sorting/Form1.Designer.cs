@@ -28,18 +28,23 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter2 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
+			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
+			TeeGrid.RowGroup.GridScrolling gridScrolling1 = new TeeGrid.RowGroup.GridScrolling();
 			this.teeGrid1 = new TeeGrid.WinForm.Grid.TeeGrid();
 			this.SuspendLayout();
 			// 
 			// teeGrid1
 			// 
+			this.teeGrid1.BackColor = System.Drawing.Color.White;
 			this.teeGrid1.Data = null;
-			this.teeGrid1.DataSource = null;
 			this.teeGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.teeGrid1.Location = new System.Drawing.Point(0, 0);
 			this.teeGrid1.Name = "teeGrid1";
-			this.teeGrid1.Painter = gdiPlusPainter2;
+			this.teeGrid1.Painter = gdiPlusPainter1;
+			gridScrolling1.Horizontal = TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = TeeGrid.RowGroup.ScrollDirection.Normal;
+			this.teeGrid1.Scrolling = gridScrolling1;
 			this.teeGrid1.Size = new System.Drawing.Size(670, 517);
 			this.teeGrid1.TabIndex = 0;
 			this.teeGrid1.Text = "teeGrid1";

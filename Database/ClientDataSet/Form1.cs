@@ -29,6 +29,7 @@ namespace ClientDataSet
 
 			ComboSource.SelectedIndex = -1;
 
+
 			ClientDataSet1NET dataSet1 = new ClientDataSet1NET();
 			XElement rowData = XElement.Parse(Properties.Resources.ClientDataSet1NET);
 			dataSet1.ROW.ReadXml(rowData.CreateReader());
@@ -41,6 +42,8 @@ namespace ClientDataSet
 			ClientDataSet2.DataSource = dataSet2;
 			ClientDataSet2.DataMember = dataSet2.ROW.TableName;
 
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
 			tTeeGrid1.Grid.CopyDataFormat = TeeGrid.ExportFormat.JSON;
 
 			ComboSource.SelectedIndex = 1;

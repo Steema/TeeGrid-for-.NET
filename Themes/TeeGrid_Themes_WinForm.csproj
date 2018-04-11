@@ -80,7 +80,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\TCROOT\TeeBINET\Grid\WinForm\TeeGrid.WinForm.csproj">
+    <ProjectReference Include="..\..\WinForm\TeeGrid.WinForm.csproj">
       <Project>{3e3cf3f2-4361-461a-bd80-a5529350f5e4}</Project>
       <Name>TeeGrid.WinForm</Name>
     </ProjectReference>

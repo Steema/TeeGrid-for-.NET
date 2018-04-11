@@ -23,7 +23,9 @@ namespace TeeGrid_Static_Charts
 		public Form1()
 		{
 			InitializeComponent();
-
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.SilverFlat.ApplyTo(tTeeGrid1.Grid);
+			tTeeGrid1.Rows.RowLines.Visible = true;
 			AddRandomData();
 
 			tTeeGrid1.Data = new VirtualListData<TLocation>(Locations);

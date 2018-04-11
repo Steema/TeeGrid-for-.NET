@@ -30,13 +30,14 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
+			TeeGrid.RowGroup.GridScrolling gridScrolling1 = new TeeGrid.RowGroup.GridScrolling();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.cbEnable = new System.Windows.Forms.CheckBox();
 			this.teeGrid1 = new TeeGrid.WinForm.Grid.TeeGrid();
 			this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
 			this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-			this.bindingOrders = new System.Windows.Forms.BindingSource(this.components);
+			this.bindingCustomers = new System.Windows.Forms.BindingSource(this.components);
 			this.fddemoDataSet = new TeeGrid_WinForm_Master_Detail.fddemoDataSet();
 			this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
 			this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -48,8 +49,8 @@
 			this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.bindingOrders = new System.Windows.Forms.BindingSource(this.components);
 			this.ordersTableAdapter = new TeeGrid_WinForm_Master_Detail.fddemoDataSetTableAdapters.OrdersTableAdapter();
-			this.bindingCustomers = new System.Windows.Forms.BindingSource(this.components);
 			this.customersTableAdapter = new TeeGrid_WinForm_Master_Detail.fddemoDataSetTableAdapters.CustomersTableAdapter();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
@@ -57,9 +58,9 @@
 			this.splitContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
 			this.bindingNavigator1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.bindingOrders)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.fddemoDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bindingCustomers)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.fddemoDataSet)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.bindingOrders)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// splitContainer1
@@ -71,6 +72,7 @@
 			// 
 			// splitContainer1.Panel1
 			// 
+			this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
 			this.splitContainer1.Panel1.Controls.Add(this.cbEnable);
 			// 
 			// splitContainer1.Panel2
@@ -96,12 +98,16 @@
 			// 
 			// teeGrid1
 			// 
+			this.teeGrid1.BackColor = System.Drawing.Color.White;
 			this.teeGrid1.Data = null;
-			this.teeGrid1.DataSource = null;
 			this.teeGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.teeGrid1.Location = new System.Drawing.Point(0, 25);
 			this.teeGrid1.Name = "teeGrid1";
 			this.teeGrid1.Painter = gdiPlusPainter1;
+			gridScrolling1.Horizontal = TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = TeeGrid.RowGroup.ScrollDirection.Normal;
+			this.teeGrid1.Scrolling = gridScrolling1;
 			this.teeGrid1.Size = new System.Drawing.Size(845, 435);
 			this.teeGrid1.TabIndex = 1;
 			this.teeGrid1.Text = "teeGrid1";
@@ -109,6 +115,7 @@
 			// bindingNavigator1
 			// 
 			this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+			this.bindingNavigator1.BackColor = System.Drawing.Color.White;
 			this.bindingNavigator1.BindingSource = this.bindingCustomers;
 			this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
 			this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -144,10 +151,10 @@
 			this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
 			this.bindingNavigatorAddNewItem.Text = "Add new";
 			// 
-			// bindingOrders
+			// bindingCustomers
 			// 
-			this.bindingOrders.DataMember = "Orders";
-			this.bindingOrders.DataSource = this.fddemoDataSet;
+			this.bindingCustomers.DataMember = "Customers";
+			this.bindingCustomers.DataSource = this.fddemoDataSet;
 			// 
 			// fddemoDataSet
 			// 
@@ -230,14 +237,14 @@
 			this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
 			this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
 			// 
+			// bindingOrders
+			// 
+			this.bindingOrders.DataMember = "Orders";
+			this.bindingOrders.DataSource = this.fddemoDataSet;
+			// 
 			// ordersTableAdapter
 			// 
 			this.ordersTableAdapter.ClearBeforeFill = true;
-			// 
-			// bindingCustomers
-			// 
-			this.bindingCustomers.DataMember = "Customers";
-			this.bindingCustomers.DataSource = this.fddemoDataSet;
 			// 
 			// customersTableAdapter
 			// 
@@ -260,9 +267,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
 			this.bindingNavigator1.ResumeLayout(false);
 			this.bindingNavigator1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.bindingOrders)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.fddemoDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.bindingCustomers)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.fddemoDataSet)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.bindingOrders)).EndInit();
 			this.ResumeLayout(false);
 
 		}

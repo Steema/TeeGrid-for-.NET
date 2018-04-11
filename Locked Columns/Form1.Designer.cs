@@ -28,7 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			TeeGrid.WinForm.Painter.GdiPlusPainter tGdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
+			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
+			TeeGrid.RowGroup.GridScrolling gridScrolling1 = new TeeGrid.RowGroup.GridScrolling();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.rbRight = new System.Windows.Forms.RadioButton();
@@ -52,6 +53,7 @@
 			// 
 			// splitContainer1.Panel1
 			// 
+			this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
 			this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
 			this.splitContainer1.Panel1.Controls.Add(this.label1);
 			this.splitContainer1.Panel1.Controls.Add(this.lbColumns);
@@ -132,12 +134,16 @@
 			// 
 			// tTeeGrid1
 			// 
+			this.tTeeGrid1.BackColor = System.Drawing.Color.White;
 			this.tTeeGrid1.Data = null;
-			this.tTeeGrid1.DataSource = null;
 			this.tTeeGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tTeeGrid1.Location = new System.Drawing.Point(0, 0);
 			this.tTeeGrid1.Name = "tTeeGrid1";
-			this.tTeeGrid1.Painter = tGdiPlusPainter1;
+			this.tTeeGrid1.Painter = gdiPlusPainter1;
+			gridScrolling1.Horizontal = TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = TeeGrid.RowGroup.ScrollDirection.Normal;
+			this.tTeeGrid1.Scrolling = gridScrolling1;
 			this.tTeeGrid1.Size = new System.Drawing.Size(676, 569);
 			this.tTeeGrid1.TabIndex = 0;
 			this.tTeeGrid1.Text = "tTeeGrid1";

@@ -16,6 +16,10 @@ namespace TeeGrid_VirtuaMode
 		{
 			InitializeComponent();
 
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.DarkFlat.ApplyTo(teeGrid1.Grid);
+	
+
 			// Important:
 			// Passing an optional default column width (60) means the grid will not need
 			// to calculate it, which is much faster.

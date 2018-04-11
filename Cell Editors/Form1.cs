@@ -13,6 +13,8 @@ namespace TeeGrid_Cell_Editors
 		{
 			InitializeComponent();
 
+			this.BackColor = System.Drawing.Color.White;
+			TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
 			CreateSampleData();
 
 			SetupCustomEditors();

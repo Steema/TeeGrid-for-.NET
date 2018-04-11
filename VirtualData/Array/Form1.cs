@@ -28,7 +28,9 @@ namespace TeeGrid_Array_Data
 			InitializeComponent();
 
 			BRecord_Click(this, EventArgs.Empty);
-
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.BlueFlat.ApplyTo(teeGrid1.Grid);
+			teeGrid1.Rows.RowLines.Visible = true;
 			teeGrid1.Rows.Height.Automatic = true;
 		}
 
@@ -70,7 +72,7 @@ namespace TeeGrid_Array_Data
 
 			SampleHeader?.Dispose();
 
-			SampleHeader = NewTitle(teeGrid1.Headers, "Header Sample" + Environment.NewLine + "Text");
+		  SampleHeader = NewTitle(teeGrid1.Headers, "Header Sample" + Environment.NewLine + "Text");
 
 			SampleHeader.Index = 0;
 
@@ -111,6 +113,7 @@ namespace TeeGrid_Array_Data
 			TextBand tmp = NewTitle(teeGrid1.Footer, "Footer Sample" + Environment.NewLine + "Text");
 
 			tmp.Format.Brush.Show();
+			tmp.Format.Brush.InitColor(ColorTranslator.FromHtml("#6BABD0"));
 			tmp.Format.Brush.Gradient.Show();
 			tmp.Format.Brush.Gradient.Direction = GradientDirection.Horizontal;
 		}
@@ -121,9 +124,11 @@ namespace TeeGrid_Array_Data
 			result.Text = text;
 
 			result.Format.Font.Size = 12;
+			result.Format.Font.Style = TeeGrid.Format.FontStyle.Bold;
+			result.Format.Font.Color = ColorTranslator.FromHtml("#034684");
 			result.Format.Stroke.Visible = true;
-			result.Format.Stroke.Color = Color.Red;
-
+			result.Format.Stroke.Size = 3;
+			result.Format.Stroke.Color = ColorTranslator.FromHtml("#6BABD0");
 			return result;
 		}
 

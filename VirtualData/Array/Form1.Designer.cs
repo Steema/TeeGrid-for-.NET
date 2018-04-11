@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
+			TeeGrid.RowGroup.GridScrolling gridScrolling1 = new TeeGrid.RowGroup.GridScrolling();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.bObject = new System.Windows.Forms.Button();
 			this.bString = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@
 			// 
 			// splitContainer1.Panel1
 			// 
+			this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
 			this.splitContainer1.Panel1.Controls.Add(this.bObject);
 			this.splitContainer1.Panel1.Controls.Add(this.bString);
 			this.splitContainer1.Panel1.Controls.Add(this.bFloat);
@@ -75,62 +77,68 @@
 			// 
 			// bObject
 			// 
+			this.bObject.BackColor = System.Drawing.Color.Transparent;
 			this.bObject.Location = new System.Drawing.Point(506, 12);
 			this.bObject.Name = "bObject";
 			this.bObject.Size = new System.Drawing.Size(75, 23);
 			this.bObject.TabIndex = 5;
 			this.bObject.Text = "Object";
-			this.bObject.UseVisualStyleBackColor = true;
+			this.bObject.UseVisualStyleBackColor = false;
 			this.bObject.Click += new System.EventHandler(this.bObject_Click);
 			// 
 			// bString
 			// 
+			this.bString.BackColor = System.Drawing.Color.Transparent;
 			this.bString.Location = new System.Drawing.Point(425, 12);
 			this.bString.Name = "bString";
 			this.bString.Size = new System.Drawing.Size(75, 23);
 			this.bString.TabIndex = 4;
 			this.bString.Text = "String ID";
-			this.bString.UseVisualStyleBackColor = true;
+			this.bString.UseVisualStyleBackColor = false;
 			this.bString.Click += new System.EventHandler(this.bString_Click);
 			// 
 			// bFloat
 			// 
+			this.bFloat.BackColor = System.Drawing.Color.Transparent;
 			this.bFloat.Location = new System.Drawing.Point(344, 12);
 			this.bFloat.Name = "bFloat";
 			this.bFloat.Size = new System.Drawing.Size(75, 23);
 			this.bFloat.TabIndex = 3;
 			this.bFloat.Text = "Float ID";
-			this.bFloat.UseVisualStyleBackColor = true;
+			this.bFloat.UseVisualStyleBackColor = false;
 			this.bFloat.Click += new System.EventHandler(this.bFloat_Click);
 			// 
 			// bInteger
 			// 
+			this.bInteger.BackColor = System.Drawing.Color.Transparent;
 			this.bInteger.Location = new System.Drawing.Point(263, 12);
 			this.bInteger.Name = "bInteger";
 			this.bInteger.Size = new System.Drawing.Size(75, 23);
 			this.bInteger.TabIndex = 2;
 			this.bInteger.Text = "Integer ID";
-			this.bInteger.UseVisualStyleBackColor = true;
+			this.bInteger.UseVisualStyleBackColor = false;
 			this.bInteger.Click += new System.EventHandler(this.bInteger_Click);
 			// 
 			// bRecord
 			// 
+			this.bRecord.BackColor = System.Drawing.Color.Transparent;
 			this.bRecord.Location = new System.Drawing.Point(182, 12);
 			this.bRecord.Name = "bRecord";
 			this.bRecord.Size = new System.Drawing.Size(75, 23);
 			this.bRecord.TabIndex = 1;
 			this.bRecord.Text = "Record";
-			this.bRecord.UseVisualStyleBackColor = true;
+			this.bRecord.UseVisualStyleBackColor = false;
 			this.bRecord.Click += new System.EventHandler(this.BRecord_Click);
 			// 
 			// button1
 			// 
+			this.button1.BackColor = System.Drawing.Color.Transparent;
 			this.button1.Location = new System.Drawing.Point(12, 12);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 0;
 			this.button1.Text = "Edit...";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// splitContainer2
@@ -146,6 +154,7 @@
 			// 
 			// splitContainer2.Panel2
 			// 
+			this.splitContainer2.Panel2.BackColor = System.Drawing.Color.White;
 			this.splitContainer2.Panel2.Controls.Add(this.button3);
 			this.splitContainer2.Panel2.Controls.Add(this.button2);
 			this.splitContainer2.Size = new System.Drawing.Size(805, 478);
@@ -154,34 +163,40 @@
 			// 
 			// teeGrid1
 			// 
+			this.teeGrid1.BackColor = System.Drawing.Color.White;
 			this.teeGrid1.Data = null;
-			this.teeGrid1.DataSource = null;
 			this.teeGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.teeGrid1.Location = new System.Drawing.Point(0, 0);
 			this.teeGrid1.Name = "teeGrid1";
 			this.teeGrid1.Painter = gdiPlusPainter1;
+			gridScrolling1.Horizontal = TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = TeeGrid.RowGroup.ScrollDirection.Normal;
+			this.teeGrid1.Scrolling = gridScrolling1;
 			this.teeGrid1.Size = new System.Drawing.Size(805, 412);
 			this.teeGrid1.TabIndex = 0;
 			this.teeGrid1.Text = "teeGrid1";
 			// 
 			// button3
 			// 
+			this.button3.BackColor = System.Drawing.Color.Transparent;
 			this.button3.Location = new System.Drawing.Point(117, 27);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(75, 23);
 			this.button3.TabIndex = 1;
 			this.button3.Text = "Footer...";
-			this.button3.UseVisualStyleBackColor = true;
+			this.button3.UseVisualStyleBackColor = false;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button2
 			// 
+			this.button2.BackColor = System.Drawing.Color.Transparent;
 			this.button2.Location = new System.Drawing.Point(12, 27);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 0;
 			this.button2.Text = "Header...";
-			this.button2.UseVisualStyleBackColor = true;
+			this.button2.UseVisualStyleBackColor = false;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// Form1

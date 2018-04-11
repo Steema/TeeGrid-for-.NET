@@ -21,6 +21,10 @@ namespace TeeGrid_WinForm_Row_Heights
 		{
 			InitializeComponent();
 
+			this.BackColor = Color.White;
+			TeeGrid.Themes.GridThemes.DarkFlat.ApplyTo(tTeeGrid1.Grid);
+
+
 			StringsData tmp = new StringsData(2, 11);
 
 			tTeeGrid1.Data = tmp;
