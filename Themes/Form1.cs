@@ -11,6 +11,7 @@ using TeeGrid.Themes;
 using TeeGrid.Data.Reflection;
 using VirtualData;
 using TeeGrid.Painter;
+using TeeGrid.WinForm.Editors;
 
 namespace TeeGrid_Themes_WinForm
 {
@@ -66,6 +67,12 @@ namespace TeeGrid_Themes_WinForm
 					GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
 					break;
 			}
+		}
+
+		private void bEdit_Click(object sender, EventArgs e)
+		{
+			TeeGridEditor editor = TeeGridEditor.Embed(this, this, tTeeGrid1.Editing);
+			editor.Show();
 		}
 	}
 }
