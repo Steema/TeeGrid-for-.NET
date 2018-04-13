@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TeeGrid.Columns;
-using TeeGrid.Data.Strings;
+using Steema.TeeGrid.Columns;
+using Steema.TeeGrid.Data.Strings;
 
 namespace TeeGrid_Locked_Columns
 {
@@ -19,7 +19,7 @@ namespace TeeGrid_Locked_Columns
 			InitializeComponent();
 
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
+			Steema.TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
 			tTeeGrid1.Rows.RowLines.Visible = true;
 
 			Data = new StringsData(30, 100);

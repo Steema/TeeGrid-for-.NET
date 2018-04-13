@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using TeeGrid.Columns;
-using TeeGrid.Ticker;
-using TeeGrid.Data.Strings;
+using Steema.TeeGrid.Columns;
+using Steema.TeeGrid.Ticker;
+using Steema.TeeGrid.Data.Strings;
 
 namespace TeeGrid_WinForm_Ticker
 {
@@ -14,8 +14,7 @@ namespace TeeGrid_WinForm_Ticker
 			InitializeComponent();
 
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
-
+			Steema.TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
 
 			Data = new StringsData(5, 8);
 
@@ -40,7 +39,7 @@ namespace TeeGrid_WinForm_Ticker
 		{
 			Column col = tTeeGrid1.Columns[0];
 			col.ParentFormat = false;
-			col.Format.Font.Style = TeeGrid.Format.FontStyle.Bold;
+			col.Format.Font.Style = Steema.TeeGrid.Format.FontStyle.Bold;
 			col.Format.Font.Color = Color.Navy;
 		}
 
@@ -51,8 +50,8 @@ namespace TeeGrid_WinForm_Ticker
 				Column tmp = tTeeGrid1.Columns[col];
 
 				tmp.ParentFormat = false;
-				tmp.TextAlignment = TeeGrid.Columns.ColumnTextAlign.Custom;
-				tmp.TextAlign.Horizontal = TeeGrid.Painter.HorizontalAlign.Right;
+				tmp.TextAlignment = Steema.TeeGrid.Columns.ColumnTextAlign.Custom;
+				tmp.TextAlign.Horizontal = Steema.TeeGrid.Painter.HorizontalAlign.Right;
 			}
 		}
 

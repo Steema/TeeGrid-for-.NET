@@ -29,12 +29,12 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
-			TeeGrid.RowGroup.GridScrolling gridScrolling1 = new TeeGrid.RowGroup.GridScrolling();
+			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
+			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.cbEnable = new System.Windows.Forms.CheckBox();
-			this.teeGrid1 = new TeeGrid.WinForm.Grid.TeeGrid();
+			this.teeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
 			this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
 			this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingCustomers = new System.Windows.Forms.BindingSource(this.components);
@@ -104,9 +104,9 @@
 			this.teeGrid1.Location = new System.Drawing.Point(0, 25);
 			this.teeGrid1.Name = "teeGrid1";
 			this.teeGrid1.Painter = gdiPlusPainter1;
-			gridScrolling1.Horizontal = TeeGrid.RowGroup.ScrollDirection.Normal;
-			gridScrolling1.Mode = TeeGrid.RowGroup.ScrollingMode.Touch;
-			gridScrolling1.Vertical = TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
 			this.teeGrid1.Scrolling = gridScrolling1;
 			this.teeGrid1.Size = new System.Drawing.Size(845, 435);
 			this.teeGrid1.TabIndex = 1;
@@ -289,7 +289,7 @@
 		private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
 		private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
 		private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-		private TeeGrid.WinForm.Grid.TeeGrid teeGrid1;
+		private Steema.TeeGrid.WinForm.TGrid teeGrid1;
 		private System.Windows.Forms.BindingSource bindingOrders;
 		private fddemoDataSet fddemoDataSet;
 		private fddemoDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;

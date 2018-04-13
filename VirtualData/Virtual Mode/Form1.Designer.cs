@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
-			TeeGrid.RowGroup.GridScrolling gridScrolling1 = new TeeGrid.RowGroup.GridScrolling();
-			this.teeGrid1 = new TeeGrid.WinForm.Grid.TeeGrid();
+			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
+			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
+			this.teeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
 			this.SuspendLayout();
 			// 
 			// teeGrid1
@@ -41,9 +41,9 @@
 			this.teeGrid1.Location = new System.Drawing.Point(0, 0);
 			this.teeGrid1.Name = "teeGrid1";
 			this.teeGrid1.Painter = gdiPlusPainter1;
-			gridScrolling1.Horizontal = TeeGrid.RowGroup.ScrollDirection.Normal;
-			gridScrolling1.Mode = TeeGrid.RowGroup.ScrollingMode.Touch;
-			gridScrolling1.Vertical = TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
 			this.teeGrid1.Scrolling = gridScrolling1;
 			this.teeGrid1.Size = new System.Drawing.Size(692, 484);
 			this.teeGrid1.TabIndex = 0;
@@ -63,7 +63,7 @@
 
 		#endregion
 
-		private TeeGrid.WinForm.Grid.TeeGrid teeGrid1;
+		private Steema.TeeGrid.WinForm.TGrid teeGrid1;
 	}
 }
 

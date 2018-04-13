@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using TeeGrid.Renders;
-using TeeGrid.Columns;
+using Steema.TeeGrid.Renders;
+using Steema.TeeGrid.Columns;
 using ClientDataSet.Resources;
-using TeeGrid.jsGrid;
-using TeeGrid.WinForm.Editors;
+using Steema.TeeGrid.jsGrid;
+using Steema.TeeGrid.WinForm.Editors;
 
 namespace ClientDataSet
 {
@@ -43,8 +43,8 @@ namespace ClientDataSet
 			ClientDataSet2.DataMember = dataSet2.ROW.TableName;
 
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
-			tTeeGrid1.Grid.CopyDataFormat = TeeGrid.ExportFormat.JSON;
+			Steema.TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
+			tTeeGrid1.Grid.CopyDataFormat = Steema.TeeGrid.ExportFormat.JSON;
 
 			ComboSource.SelectedIndex = 1;
 		}
@@ -140,7 +140,7 @@ namespace ClientDataSet
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			tTeeGrid1.ExportToDisk(TeeGrid.ExportFormat.jsGrid, @"C:\tmp");
+			tTeeGrid1.ExportToDisk(Steema.TeeGrid.ExportFormat.jsGrid, @"C:\tmp");
 		}
 	}
 

@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TeeGrid.Themes;
-using TeeGrid.Data.Reflection;
+using Steema.TeeGrid.Themes;
+using Steema.TeeGrid.Data.Reflection;
 using VirtualData;
-using TeeGrid.Painter;
-using TeeGrid.WinForm.Editors;
+using Steema.TeeGrid.Painter;
+using Steema.TeeGrid.WinForm.Editors;
 
 namespace TeeGrid_Themes_WinForm
 {

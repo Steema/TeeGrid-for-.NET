@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
-			TeeGrid.RowGroup.GridScrolling gridScrolling1 = new TeeGrid.RowGroup.GridScrolling();
+			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
+			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.rbRight = new System.Windows.Forms.RadioButton();
@@ -37,7 +37,7 @@
 			this.rbNone = new System.Windows.Forms.RadioButton();
 			this.label1 = new System.Windows.Forms.Label();
 			this.lbColumns = new System.Windows.Forms.ListBox();
-			this.tTeeGrid1 = new TeeGrid.WinForm.Grid.TeeGrid();
+			this.tTeeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -140,9 +140,9 @@
 			this.tTeeGrid1.Location = new System.Drawing.Point(0, 0);
 			this.tTeeGrid1.Name = "tTeeGrid1";
 			this.tTeeGrid1.Painter = gdiPlusPainter1;
-			gridScrolling1.Horizontal = TeeGrid.RowGroup.ScrollDirection.Normal;
-			gridScrolling1.Mode = TeeGrid.RowGroup.ScrollingMode.Touch;
-			gridScrolling1.Vertical = TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
 			this.tTeeGrid1.Scrolling = gridScrolling1;
 			this.tTeeGrid1.Size = new System.Drawing.Size(676, 569);
 			this.tTeeGrid1.TabIndex = 0;
@@ -170,7 +170,7 @@
 		#endregion
 
 		private System.Windows.Forms.SplitContainer splitContainer1;
-		private TeeGrid.WinForm.Grid.TeeGrid tTeeGrid1;
+		private Steema.TeeGrid.WinForm.TGrid tTeeGrid1;
 		private System.Windows.Forms.ListBox lbColumns;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.GroupBox groupBox1;

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using TeeGrid.Data.Reflection;
+using Steema.TeeGrid.Data.Reflection;
 using VirtualData;
-using TeeGrid.WinForm.Grid;
+using Steema.TeeGrid.WinForm;
 
 namespace TeeGrid_Cell_Editors
 {
@@ -14,7 +14,7 @@ namespace TeeGrid_Cell_Editors
 			InitializeComponent();
 
 			this.BackColor = System.Drawing.Color.White;
-			TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
+			Steema.TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
 			CreateSampleData();
 
 			SetupCustomEditors();
@@ -108,7 +108,7 @@ namespace TeeGrid_Cell_Editors
 
 		private void CbEnterKey_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			tTeeGrid1.Editing.EnterKey = (TeeGrid.EditingEnter)cbEnterKey.SelectedIndex;
+			tTeeGrid1.Editing.EnterKey = (Steema.TeeGrid.EditingEnter)cbEnterKey.SelectedIndex;
 		}
 
 		private void CbSelectedText_CheckedChanged(object sender, EventArgs e)

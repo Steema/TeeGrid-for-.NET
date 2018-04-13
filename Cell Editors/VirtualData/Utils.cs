@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
-using TeeGrid.Columns;
-using TeeGrid.WinForm.Grid;
+using Steema.TeeGrid.Columns;
+using Steema.TeeGrid.WinForm;
 
 namespace VirtualData
 {
 	public static class Utils
 	{
-		public static void ResetCustomEditors(TeeGrid.WinForm.Grid.TeeGrid grid)
+		public static void ResetCustomEditors(Steema.TeeGrid.WinForm.TGrid grid)
 		{
 			void ResetColumns(Columns columns)
 			{

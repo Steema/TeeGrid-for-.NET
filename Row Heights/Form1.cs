@@ -8,10 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TeeGrid.Columns;
-using TeeGrid.Data.Strings;
-using TeeGrid.Painter;
-using TeeGrid.WinForm.Editors;
+using Steema.TeeGrid.Columns;
+using Steema.TeeGrid.Data.Strings;
+using Steema.TeeGrid.Painter;
+using Steema.TeeGrid.WinForm.Editors;
 
 namespace TeeGrid_WinForm_Row_Heights
 {
@@ -22,7 +22,7 @@ namespace TeeGrid_WinForm_Row_Heights
 			InitializeComponent();
 
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.DarkFlat.ApplyTo(tTeeGrid1.Grid);
+			Steema.TeeGrid.Themes.GridThemes.DarkFlat.ApplyTo(tTeeGrid1.Grid);
 
 
 			StringsData tmp = new StringsData(2, 11);

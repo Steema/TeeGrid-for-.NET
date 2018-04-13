@@ -29,14 +29,14 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new TeeGrid.WinForm.Painter.GdiPlusPainter();
-			TeeGrid.RowGroup.GridScrolling gridScrolling1 = new TeeGrid.RowGroup.GridScrolling();
+			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
+			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.LSpeed = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tBSpeed = new System.Windows.Forms.TrackBar();
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-			this.tTeeGrid1 = new TeeGrid.WinForm.Grid.TeeGrid();
+			this.tTeeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
 			this.label2 = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -129,9 +129,9 @@
 			this.tTeeGrid1.Location = new System.Drawing.Point(0, 0);
 			this.tTeeGrid1.Name = "tTeeGrid1";
 			this.tTeeGrid1.Painter = gdiPlusPainter1;
-			gridScrolling1.Horizontal = TeeGrid.RowGroup.ScrollDirection.Normal;
-			gridScrolling1.Mode = TeeGrid.RowGroup.ScrollingMode.Touch;
-			gridScrolling1.Vertical = TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
 			this.tTeeGrid1.Scrolling = gridScrolling1;
 			this.tTeeGrid1.Size = new System.Drawing.Size(402, 231);
 			this.tTeeGrid1.TabIndex = 0;
@@ -179,7 +179,7 @@
 
 		private System.Windows.Forms.SplitContainer splitContainer1;
 		private System.Windows.Forms.SplitContainer splitContainer2;
-		private TeeGrid.WinForm.Grid.TeeGrid tTeeGrid1;
+		private Steema.TeeGrid.WinForm.TGrid tTeeGrid1;
 		private System.Windows.Forms.Label LSpeed;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Timer timer1;

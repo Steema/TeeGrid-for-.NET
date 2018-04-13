@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TeeGrid.Columns;
-using TeeGrid.Data.Reflection;
-using TeeGrid.Header;
-using TeeGrid.Renders;
+using Steema.TeeGrid.Columns;
+using Steema.TeeGrid.Data.Reflection;
+using Steema.TeeGrid.Header;
+using Steema.TeeGrid.Renders;
 
 namespace TeeGrid_Custom_Sorting
 {
@@ -29,7 +29,7 @@ namespace TeeGrid_Custom_Sorting
 			teeGrid1.Header.Sortable = true;
 			teeGrid1.Header.SortRender = CreateSortable();
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.Flat.ApplyTo(teeGrid1.Grid);
+			Steema.TeeGrid.Themes.GridThemes.Flat.ApplyTo(teeGrid1.Grid);
 			teeGrid1.Data = new VirtualListData<Location>(Locations);
 		}
 
@@ -54,20 +54,20 @@ namespace TeeGrid_Custom_Sorting
 			if (e.Column == LastSorted.Column)
 			{
 				if (LastSorted.Ascending)
-					e.State = TeeGrid.Header.SortState.Ascending;
+					e.State = Steema.TeeGrid.Header.SortState.Ascending;
 				else
-					e.State = TeeGrid.Header.SortState.Descending;
+					e.State = Steema.TeeGrid.Header.SortState.Descending;
 			}
 			else
-				e.State = TeeGrid.Header.SortState.None;
+				e.State = Steema.TeeGrid.Header.SortState.None;
 		}
 
 		private void SortBy(object sender, SortableColumnEventArgs e)
 		{
-			SortStateEventArgs args = new SortStateEventArgs() { Column = e.Column, State = TeeGrid.Header.SortState.None };
+			SortStateEventArgs args = new SortStateEventArgs() { Column = e.Column, State = Steema.TeeGrid.Header.SortState.None };
 			SortState(sender, args);
 
-			LastSorted.Ascending = args.State != TeeGrid.Header.SortState.Ascending;
+			LastSorted.Ascending = args.State != Steema.TeeGrid.Header.SortState.Ascending;
 
 			e.SortedData = SortData(args.Column, LastSorted.Ascending);
 

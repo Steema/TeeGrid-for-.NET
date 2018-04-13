@@ -8,15 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TeeGrid.Bands;
-using TeeGrid.Columns;
-using TeeGrid.Data;
-using TeeGrid.Data.Reflection;
-using TeeGrid.Format;
-using TeeGrid.Renders;
-using TeeGrid.Rows;
-using TeeGrid.Totals;
-using TeeGrid.WinForm.Editors;
+using Steema.TeeGrid.Bands;
+using Steema.TeeGrid.Columns;
+using Steema.TeeGrid.Data;
+using Steema.TeeGrid.Data.Reflection;
+using Steema.TeeGrid.Format;
+using Steema.TeeGrid.Renders;
+using Steema.TeeGrid.Rows;
+using Steema.TeeGrid.Totals;
+using Steema.TeeGrid.WinForm.Editors;
 using VirtualData;
 
 namespace TeeGrid_Array_Data
@@ -29,7 +29,7 @@ namespace TeeGrid_Array_Data
 
 			BRecord_Click(this, EventArgs.Empty);
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.BlueFlat.ApplyTo(teeGrid1.Grid);
+			Steema.TeeGrid.Themes.GridThemes.BlueFlat.ApplyTo(teeGrid1.Grid);
 			teeGrid1.Rows.RowLines.Visible = true;
 			teeGrid1.Rows.Height.Automatic = true;
 		}
@@ -82,7 +82,7 @@ namespace TeeGrid_Array_Data
 
 		}
 
-		private void GridCellEditing(object sender, TeeGrid.WinForm.Grid.CellEditingEventArgs e)
+		private void GridCellEditing(object sender, Steema.TeeGrid.WinForm.CellEditingEventArgs e)
 		{
 			if(e.Column == teeGrid1.Columns["Children"])
 			{
@@ -124,7 +124,7 @@ namespace TeeGrid_Array_Data
 			result.Text = text;
 
 			result.Format.Font.Size = 12;
-			result.Format.Font.Style = TeeGrid.Format.FontStyle.Bold;
+			result.Format.Font.Style = Steema.TeeGrid.Format.FontStyle.Bold;
 			result.Format.Font.Color = ColorTranslator.FromHtml("#034684");
 			result.Format.Stroke.Visible = true;
 			result.Format.Stroke.Size = 3;
@@ -143,7 +143,7 @@ namespace TeeGrid_Array_Data
 			result.Calculation.Add(result.Columns["Address"].Items["Number"], ColumnCalculation.Max);
 			result.Calculation.Add(result.Columns["Car"].Items["kW"], ColumnCalculation.Min);
 
-			result.Format.Font.Style = TeeGrid.Format.FontStyle.Bold | TeeGrid.Format.FontStyle.Italic;
+			result.Format.Font.Style = Steema.TeeGrid.Format.FontStyle.Bold | Steema.TeeGrid.Format.FontStyle.Italic;
 
 			return result;
 		}

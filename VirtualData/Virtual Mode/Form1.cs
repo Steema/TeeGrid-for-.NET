@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using TeeGrid.Data.Strings;
+using Steema.TeeGrid.Data.Strings;
 
 namespace TeeGrid_VirtuaMode
 {
@@ -17,7 +17,7 @@ namespace TeeGrid_VirtuaMode
 			InitializeComponent();
 
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.DarkFlat.ApplyTo(teeGrid1.Grid);
+			Steema.TeeGrid.Themes.GridThemes.DarkFlat.ApplyTo(teeGrid1.Grid);
 	
 
 			// Important:

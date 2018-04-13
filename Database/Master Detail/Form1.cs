@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TeeGrid.Data;
-using TeeGrid.Data.DB;
-using TeeGrid.Renders;
-using TeeGrid.Totals;
+using Steema.TeeGrid.Data;
+using Steema.TeeGrid.Data.DB;
+using Steema.TeeGrid.Renders;
+using Steema.TeeGrid.Totals;
 using static TeeGrid_WinForm_Master_Detail.fddemoDataSet;
 
 namespace TeeGrid_WinForm_Master_Detail
@@ -22,7 +22,7 @@ namespace TeeGrid_WinForm_Master_Detail
 			InitializeComponent();
 
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.Flat.ApplyTo(teeGrid1.Grid);
+			Steema.TeeGrid.Themes.GridThemes.Flat.ApplyTo(teeGrid1.Grid);
 
 
 			// TODO: This line of code loads data into the 'fddemoDataSet.Customers' table. You can move, or remove it, as needed.
@@ -40,7 +40,7 @@ namespace TeeGrid_WinForm_Master_Detail
 			teeGrid1.Grid.Current.NewDetail += DetailNewGroup;
 		}
 
-		private void DetailNewGroup(object sender, TeeGrid.RowGroup.NewDetailEventArgs e)
+		private void DetailNewGroup(object sender, Steema.TeeGrid.RowGroup.NewDetailEventArgs e)
 		{
 			ColumnTotals tmpTot = new ColumnTotals(e.NewGroup.Footer);
 
