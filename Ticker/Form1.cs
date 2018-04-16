@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Steema.TeeGrid.Columns;
 using Steema.TeeGrid.Ticker;
 using Steema.TeeGrid.Data.Strings;
+using Steema.TeeGrid.WinForm.Editors;
 
 namespace TeeGrid_WinForm_Ticker
 {
@@ -30,6 +31,8 @@ namespace TeeGrid_WinForm_Ticker
 
 			Ticker = new GridTicker(tTeeGrid1.Grid.Current);
 
+			//GridTickerEditor tEditor = new GridTickerEditor();
+			GridTickerEditor.Embed(tTeeGrid1.Grid, splitContainer2.Panel2, Ticker);
 			//TickerEditor
 
 			timer1.Enabled = true;

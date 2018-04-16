@@ -36,9 +36,8 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.tBSpeed = new System.Windows.Forms.TrackBar();
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-			this.tTeeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
-			this.label2 = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.tTeeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -46,7 +45,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.tBSpeed)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
 			this.splitContainer2.Panel1.SuspendLayout();
-			this.splitContainer2.Panel2.SuspendLayout();
 			this.splitContainer2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -116,10 +114,14 @@
 			// splitContainer2.Panel2
 			// 
 			this.splitContainer2.Panel2.BackColor = System.Drawing.Color.White;
-			this.splitContainer2.Panel2.Controls.Add(this.label2);
 			this.splitContainer2.Size = new System.Drawing.Size(402, 422);
 			this.splitContainer2.SplitterDistance = 231;
 			this.splitContainer2.TabIndex = 0;
+			// 
+			// timer1
+			// 
+			this.timer1.Interval = 150;
+			this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
 			// 
 			// tTeeGrid1
 			// 
@@ -137,21 +139,6 @@
 			this.tTeeGrid1.TabIndex = 0;
 			this.tTeeGrid1.Text = "tTeeGrid1";
 			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(77, 78);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(234, 26);
-			this.label2.TabIndex = 0;
-			this.label2.Text = "Missing Ticker Editor";
-			// 
-			// timer1
-			// 
-			this.timer1.Interval = 150;
-			this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,8 +154,6 @@
 			this.splitContainer1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tBSpeed)).EndInit();
 			this.splitContainer2.Panel1.ResumeLayout(false);
-			this.splitContainer2.Panel2.ResumeLayout(false);
-			this.splitContainer2.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
 			this.splitContainer2.ResumeLayout(false);
 			this.ResumeLayout(false);
@@ -184,7 +169,6 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.TrackBar tBSpeed;
-		private System.Windows.Forms.Label label2;
 	}
 }
 
