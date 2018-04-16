@@ -11,10 +11,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TeeGrid.Format;
-using TeeGrid.Columns;
-using TeeGrid.Data.Reflection;
-using TeeGrid.WinForm.Editors;
+using Steema.TeeGrid.Format;
+using Steema.TeeGrid.Columns;
+using Steema.TeeGrid.Data.Reflection;
+using Steema.TeeGrid.WinForm.Editors;
 
 namespace TeeGrid_Static_Charts
 {
@@ -24,7 +24,7 @@ namespace TeeGrid_Static_Charts
 		{
 			InitializeComponent();
 			this.BackColor = Color.White;
-			TeeGrid.Themes.GridThemes.SilverFlat.ApplyTo(tTeeGrid1.Grid);
+			Steema.TeeGrid.Themes.GridThemes.SilverFlat.ApplyTo(tTeeGrid1.Grid);
 			tTeeGrid1.Rows.RowLines.Visible = true;
 			AddRandomData();
 
@@ -55,7 +55,7 @@ namespace TeeGrid_Static_Charts
 		{
 			e.DefaultPaint = false;
 
-			using (Bitmap bitmap = CreateChart(e.AData.Row, TeeGrid.Utils.Round(e.AData.Bounds.Width), TeeGrid.Utils.Round(e.AData.Bounds.Height)))
+			using (Bitmap bitmap = CreateChart(e.AData.Row, Steema.TeeGrid.Utils.Round(e.AData.Bounds.Width), Steema.TeeGrid.Utils.Round(e.AData.Bounds.Height)))
 			{
 				using (Picture picture = Picture.NewPicture())
 				{
