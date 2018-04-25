@@ -28,34 +28,19 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
 			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
 			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
-			this.bindingCustomers = new System.Windows.Forms.BindingSource(this.components);
 			this.fddemoDataSet = new TeeGrid_WinForm_Master_Detail.fddemoDataSet();
-			this.bindingOrders = new System.Windows.Forms.BindingSource(this.components);
 			this.ordersTableAdapter = new TeeGrid_WinForm_Master_Detail.fddemoDataSetTableAdapters.OrdersTableAdapter();
 			this.customersTableAdapter = new TeeGrid_WinForm_Master_Detail.fddemoDataSetTableAdapters.CustomersTableAdapter();
 			this.teeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
-			((System.ComponentModel.ISupportInitialize)(this.bindingCustomers)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fddemoDataSet)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.bindingOrders)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// bindingCustomers
-			// 
-			this.bindingCustomers.DataMember = "Customers";
-			this.bindingCustomers.DataSource = this.fddemoDataSet;
 			// 
 			// fddemoDataSet
 			// 
 			this.fddemoDataSet.DataSetName = "fddemoDataSet";
 			this.fddemoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// bindingOrders
-			// 
-			this.bindingOrders.DataMember = "Orders";
-			this.bindingOrders.DataSource = this.fddemoDataSet;
 			// 
 			// ordersTableAdapter
 			// 
@@ -87,19 +72,15 @@
 			this.ClientSize = new System.Drawing.Size(845, 502);
 			this.Controls.Add(this.teeGrid1);
 			this.Name = "Form1";
-			this.Text = "Form1";
-			((System.ComponentModel.ISupportInitialize)(this.bindingCustomers)).EndInit();
+			this.Text = "TeeGrid using Two Tables Joined";
 			((System.ComponentModel.ISupportInitialize)(this.fddemoDataSet)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.bindingOrders)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
-		private System.Windows.Forms.BindingSource bindingOrders;
 		private fddemoDataSet fddemoDataSet;
 		private fddemoDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;
-		private System.Windows.Forms.BindingSource bindingCustomers;
 		private fddemoDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
 		private Steema.TeeGrid.WinForm.TGrid teeGrid1;
 	}
