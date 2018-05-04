@@ -64,7 +64,7 @@ namespace ClientDataSet
 					tTeeGrid1.DataSource = ClientDataSet1;
 					bindingNavigator1.BindingSource = ClientDataSet1;
 					break;
-				case 2:
+				case 2:  //animals
 					tTeeGrid1.DataSource = ClientDataSet2;
 					tTeeGrid1.Rows.Height.Value = 100;
 					bindingNavigator1.BindingSource = ClientDataSet2;
@@ -140,7 +140,9 @@ namespace ClientDataSet
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			tTeeGrid1.ExportToDisk(Steema.TeeGrid.ExportFormat.jsGrid, @"C:\tmp");
+			tTeeGrid1.Grid.Export.JSGrid.SavePath = @"C:\tmp";
+			tTeeGrid1.Grid.Export.JSGrid.UsePublicResources = true;
+			tTeeGrid1.Grid.Export.JSGrid.Save();
 		}
 	}
 
