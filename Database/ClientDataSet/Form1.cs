@@ -13,7 +13,6 @@ using Steema.TeeGrid.Columns;
 using ClientDataSet.Resources;
 using Steema.TeeGrid.jsGrid;
 using Steema.TeeGrid.WinForm.Editors;
-using System.IO;
 
 namespace ClientDataSet
 {
@@ -26,54 +25,10 @@ namespace ClientDataSet
 
 		public Form1()
 		{
-			DataTable StronglyTyped(ClientDataSet2NET dataSet)
-			{
-				Bitmap StringToBitmap(string s)
-				{
-					byte[] bytes = Convert.FromBase64String(s);
-					byte[] validbytes = new byte[bytes.Length - 8]; //first 8 bytes unnecessary
-					Array.Copy(bytes, 8, validbytes, 0, bytes.Length - 8);
-
-					Bitmap bmp;
-
-					using (MemoryStream stream = new MemoryStream(validbytes))
-					{
-						stream.Position = 0;
-						bmp = (Bitmap)Image.FromStream(stream);
-					}
-
-					return bmp;
-				}
-
-				DataTable table = dataSet.ROW;
-				DataTable result = new DataTable(table.TableName);
-
-				result.Columns.Add(table.Columns[0].ColumnName, typeof(string));
-				result.Columns.Add(table.Columns[1].ColumnName, typeof(int));
-				result.Columns.Add(table.Columns[2].ColumnName, typeof(int));
-				result.Columns.Add(table.Columns[3].ColumnName, typeof(string));
-				result.Columns.Add(table.Columns[4].ColumnName, typeof(Bitmap));
-
-				foreach (DataRow row in table.Rows)
-				{
-					DataRow newRow = result.NewRow();
-
-					for (int i = 0; i < table.Columns.Count; i++)
-					{
-						if (i == table.Columns.Count - 1)
-							newRow[i] = StringToBitmap(row[i].ToString());
-						else
-							newRow[i] = row[i];
-					}
-
-					result.Rows.Add(newRow);
-				}
-				return result;
-			}
-
 			InitializeComponent();
 
 			ComboSource.SelectedIndex = -1;
+
 
 			ClientDataSet1NET dataSet1 = new ClientDataSet1NET();
 			XElement rowData = XElement.Parse(Properties.Resources.ClientDataSet1NET);
@@ -84,9 +39,8 @@ namespace ClientDataSet
 			ClientDataSet2NET dataSet2 = new ClientDataSet2NET();
 			rowData = XElement.Parse(Properties.Resources.ClientDataSet2NET);
 			dataSet2.ROW.ReadXml(rowData.CreateReader());
-
-			//dataSet2 is not strongly typed - convert it so Bitmap recognized
-			ClientDataSet2.DataSource = StronglyTyped(dataSet2);
+			ClientDataSet2.DataSource = dataSet2;
+			ClientDataSet2.DataMember = dataSet2.ROW.TableName;
 
 			this.BackColor = Color.White;
 			Steema.TeeGrid.Themes.GridThemes.Flat.ApplyTo(tTeeGrid1.Grid);
