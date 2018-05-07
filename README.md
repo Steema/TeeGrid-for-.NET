@@ -1,4 +1,4 @@
-# TeeGrid-for-.NET-CSharp-WinForms-samples
+# TeeGrid-for-.NET-CSharp-samples
 
 ## Description
 The folder contains the sample projects to be used with the TeeGrid for .NET control,
