@@ -278,15 +278,15 @@ namespace ClientDataSet.Resources {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ROWDataTable : global::System.Data.TypedTableBase<ROWRow> {
             
-            private global::System.Data.DataColumn columnNAME;
+            private global::System.Data.DataColumn columnFRUIT;
             
-            private global::System.Data.DataColumn columnSIZE;
+            private global::System.Data.DataColumn columnPRODUCTION;
             
             private global::System.Data.DataColumn columnWEIGHT;
             
-            private global::System.Data.DataColumn columnAREA;
+            private global::System.Data.DataColumn columnTOPCOUNTRY;
             
-            private global::System.Data.DataColumn columnBMP;
+            private global::System.Data.DataColumn columnIMAGE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -323,17 +323,17 @@ namespace ClientDataSet.Resources {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NAMEColumn {
+            public global::System.Data.DataColumn FRUITColumn {
                 get {
-                    return this.columnNAME;
+                    return this.columnFRUIT;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SIZEColumn {
+            public global::System.Data.DataColumn PRODUCTIONColumn {
                 get {
-                    return this.columnSIZE;
+                    return this.columnPRODUCTION;
                 }
             }
             
@@ -347,17 +347,17 @@ namespace ClientDataSet.Resources {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AREAColumn {
+            public global::System.Data.DataColumn TOPCOUNTRYColumn {
                 get {
-                    return this.columnAREA;
+                    return this.columnTOPCOUNTRY;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn BMPColumn {
+            public global::System.Data.DataColumn IMAGEColumn {
                 get {
-                    return this.columnBMP;
+                    return this.columnIMAGE;
                 }
             }
             
@@ -398,14 +398,14 @@ namespace ClientDataSet.Resources {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ROWRow AddROWRow(string NAME, string SIZE, string WEIGHT, string AREA, string BMP) {
+            public ROWRow AddROWRow(string FRUIT, int PRODUCTION, int WEIGHT, string TOPCOUNTRY, string IMAGE) {
                 ROWRow rowROWRow = ((ROWRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        NAME,
-                        SIZE,
+                        FRUIT,
+                        PRODUCTION,
                         WEIGHT,
-                        AREA,
-                        BMP};
+                        TOPCOUNTRY,
+                        IMAGE};
                 rowROWRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowROWRow);
                 return rowROWRow;
@@ -428,26 +428,26 @@ namespace ClientDataSet.Resources {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnNAME = base.Columns["NAME"];
-                this.columnSIZE = base.Columns["SIZE"];
+                this.columnFRUIT = base.Columns["FRUIT"];
+                this.columnPRODUCTION = base.Columns["PRODUCTION"];
                 this.columnWEIGHT = base.Columns["WEIGHT"];
-                this.columnAREA = base.Columns["AREA"];
-                this.columnBMP = base.Columns["BMP"];
+                this.columnTOPCOUNTRY = base.Columns["TOPCOUNTRY"];
+                this.columnIMAGE = base.Columns["IMAGE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNAME);
-                this.columnSIZE = new global::System.Data.DataColumn("SIZE", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSIZE);
-                this.columnWEIGHT = new global::System.Data.DataColumn("WEIGHT", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnFRUIT = new global::System.Data.DataColumn("FRUIT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFRUIT);
+                this.columnPRODUCTION = new global::System.Data.DataColumn("PRODUCTION", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRODUCTION);
+                this.columnWEIGHT = new global::System.Data.DataColumn("WEIGHT", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWEIGHT);
-                this.columnAREA = new global::System.Data.DataColumn("AREA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAREA);
-                this.columnBMP = new global::System.Data.DataColumn("BMP", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBMP);
+                this.columnTOPCOUNTRY = new global::System.Data.DataColumn("TOPCOUNTRY", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOPCOUNTRY);
+                this.columnIMAGE = new global::System.Data.DataColumn("IMAGE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIMAGE);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -590,42 +590,42 @@ namespace ClientDataSet.Resources {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string NAME {
+            public string FRUIT {
                 get {
                     try {
-                        return ((string)(this[this.tableROW.NAMEColumn]));
+                        return ((string)(this[this.tableROW.FRUITColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'ROW\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FRUIT\' in table \'ROW\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableROW.NAMEColumn] = value;
+                    this[this.tableROW.FRUITColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string SIZE {
+            public int PRODUCTION {
                 get {
                     try {
-                        return ((string)(this[this.tableROW.SIZEColumn]));
+                        return ((int)(this[this.tableROW.PRODUCTIONColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SIZE\' in table \'ROW\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRODUCTION\' in table \'ROW\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableROW.SIZEColumn] = value;
+                    this[this.tableROW.PRODUCTIONColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string WEIGHT {
+            public int WEIGHT {
                 get {
                     try {
-                        return ((string)(this[this.tableROW.WEIGHTColumn]));
+                        return ((int)(this[this.tableROW.WEIGHTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT\' in table \'ROW\' is DBNull.", e);
@@ -638,58 +638,58 @@ namespace ClientDataSet.Resources {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string AREA {
+            public string TOPCOUNTRY {
                 get {
                     try {
-                        return ((string)(this[this.tableROW.AREAColumn]));
+                        return ((string)(this[this.tableROW.TOPCOUNTRYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AREA\' in table \'ROW\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TOPCOUNTRY\' in table \'ROW\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableROW.AREAColumn] = value;
+                    this[this.tableROW.TOPCOUNTRYColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string BMP {
+            public string IMAGE {
                 get {
                     try {
-                        return ((string)(this[this.tableROW.BMPColumn]));
+                        return ((string)(this[this.tableROW.IMAGEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BMP\' in table \'ROW\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IMAGE\' in table \'ROW\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableROW.BMPColumn] = value;
+                    this[this.tableROW.IMAGEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNAMENull() {
-                return this.IsNull(this.tableROW.NAMEColumn);
+            public bool IsFRUITNull() {
+                return this.IsNull(this.tableROW.FRUITColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNAMENull() {
-                this[this.tableROW.NAMEColumn] = global::System.Convert.DBNull;
+            public void SetFRUITNull() {
+                this[this.tableROW.FRUITColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSIZENull() {
-                return this.IsNull(this.tableROW.SIZEColumn);
+            public bool IsPRODUCTIONNull() {
+                return this.IsNull(this.tableROW.PRODUCTIONColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSIZENull() {
-                this[this.tableROW.SIZEColumn] = global::System.Convert.DBNull;
+            public void SetPRODUCTIONNull() {
+                this[this.tableROW.PRODUCTIONColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -706,26 +706,26 @@ namespace ClientDataSet.Resources {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAREANull() {
-                return this.IsNull(this.tableROW.AREAColumn);
+            public bool IsTOPCOUNTRYNull() {
+                return this.IsNull(this.tableROW.TOPCOUNTRYColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAREANull() {
-                this[this.tableROW.AREAColumn] = global::System.Convert.DBNull;
+            public void SetTOPCOUNTRYNull() {
+                this[this.tableROW.TOPCOUNTRYColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsBMPNull() {
-                return this.IsNull(this.tableROW.BMPColumn);
+            public bool IsIMAGENull() {
+                return this.IsNull(this.tableROW.IMAGEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetBMPNull() {
-                this[this.tableROW.BMPColumn] = global::System.Convert.DBNull;
+            public void SetIMAGENull() {
+                this[this.tableROW.IMAGEColumn] = global::System.Convert.DBNull;
             }
         }
         

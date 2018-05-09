@@ -31,12 +31,10 @@ namespace ClientDataSet
 				Bitmap StringToBitmap(string s)
 				{
 					byte[] bytes = Convert.FromBase64String(s);
-					byte[] validbytes = new byte[bytes.Length - 8]; //first 8 bytes unnecessary
-					Array.Copy(bytes, 8, validbytes, 0, bytes.Length - 8);
 
 					Bitmap bmp;
 
-					using (MemoryStream stream = new MemoryStream(validbytes))
+					using (MemoryStream stream = new MemoryStream(bytes))
 					{
 						stream.Position = 0;
 						bmp = (Bitmap)Image.FromStream(stream);
@@ -110,7 +108,7 @@ namespace ClientDataSet
 					tTeeGrid1.DataSource = ClientDataSet1;
 					bindingNavigator1.BindingSource = ClientDataSet1;
 					break;
-				case 2:  //animals
+				case 2:  //fruit
 					tTeeGrid1.DataSource = ClientDataSet2;
 					tTeeGrid1.Rows.Height.Value = 100;
 					bindingNavigator1.BindingSource = ClientDataSet2;
