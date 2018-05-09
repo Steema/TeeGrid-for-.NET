@@ -1,16 +1,25 @@
-<?xml version="1.0" standalone="yes"?>
-<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ROW" msdata:UseCurrentLocale="true">
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="NewDataSet" msprop:Generator_UserDSName="NewDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ROW">
+        <xs:element name="ROW" msprop:Generator_TableClassName="ROWDataTable" msprop:Generator_TableVarName="tableROW" msprop:Generator_RowChangedName="ROWRowChanged" msprop:Generator_TablePropName="ROW" msprop:Generator_RowDeletingName="ROWRowDeleting" msprop:Generator_RowChangingName="ROWRowChanging" msprop:Generator_RowEvHandlerName="ROWRowChangeEventHandler" msprop:Generator_RowDeletedName="ROWRowDeleted" msprop:Generator_RowClassName="ROWRow" msprop:Generator_UserTableName="ROW" msprop:Generator_RowEvArgName="ROWRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="NAME" type="xs:string" minOccurs="0" />
-              <xs:element name="SIZE" type="xs:int" minOccurs="0" />
-              <xs:element name="WEIGHT" type="xs:int" minOccurs="0" />
-              <xs:element name="AREA" type="xs:string" minOccurs="0" />
-              <xs:element name="BMP" type="xs:string" minOccurs="0" />
+              <xs:element name="FRUIT" msprop:Generator_ColumnVarNameInTable="columnFRUIT" msprop:Generator_ColumnPropNameInRow="FRUIT" msprop:Generator_ColumnPropNameInTable="FRUITColumn" msprop:Generator_UserColumnName="FRUIT" type="xs:string" minOccurs="0" />
+              <xs:element name="PRODUCTION" msprop:Generator_ColumnVarNameInTable="columnPRODUCTION" msprop:Generator_ColumnPropNameInRow="PRODUCTION" msprop:Generator_ColumnPropNameInTable="PRODUCTIONColumn" msprop:Generator_UserColumnName="PRODUCTION" type="xs:int" minOccurs="0" />
+              <xs:element name="WEIGHT" msprop:Generator_ColumnVarNameInTable="columnWEIGHT" msprop:Generator_ColumnPropNameInRow="WEIGHT" msprop:Generator_ColumnPropNameInTable="WEIGHTColumn" msprop:Generator_UserColumnName="WEIGHT" type="xs:int" minOccurs="0" />
+              <xs:element name="TOPCOUNTRY" msprop:Generator_ColumnVarNameInTable="columnTOPCOUNTRY" msprop:Generator_ColumnPropNameInRow="TOPCOUNTRY" msprop:Generator_ColumnPropNameInTable="TOPCOUNTRYColumn" msprop:Generator_UserColumnName="TOPCOUNTRY" type="xs:string" minOccurs="0" />
+              <xs:element name="IMAGE" msprop:Generator_ColumnVarNameInTable="columnIMAGE" msprop:Generator_ColumnPropNameInRow="IMAGE" msprop:Generator_ColumnPropNameInTable="IMAGEColumn" msprop:Generator_UserColumnName="IMAGE" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

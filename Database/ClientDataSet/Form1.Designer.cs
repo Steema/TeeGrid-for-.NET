@@ -267,7 +267,7 @@
 			this.ComboSource.Items.AddRange(new object[] {
             "(none)",
             "Customers ClientDataSet",
-            "Animals ClientDataSet",
+            "Fruit ClientDataSet",
             "Big Dataset"});
 			this.ComboSource.Location = new System.Drawing.Point(179, 21);
 			this.ComboSource.Name = "ComboSource";

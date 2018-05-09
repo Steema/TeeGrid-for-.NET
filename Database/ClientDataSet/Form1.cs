@@ -25,6 +25,7 @@ namespace ClientDataSet
 
 		public Form1()
 		{
+					using (MemoryStream stream = new MemoryStream(validbytes))
 			InitializeComponent();
 
 			ComboSource.SelectedIndex = -1;
@@ -64,7 +65,7 @@ namespace ClientDataSet
 					tTeeGrid1.DataSource = ClientDataSet1;
 					bindingNavigator1.BindingSource = ClientDataSet1;
 					break;
-				case 2:  //animals
+				case 2:  //fruit
 					tTeeGrid1.DataSource = ClientDataSet2;
 					tTeeGrid1.Rows.Height.Value = 100;
 					bindingNavigator1.BindingSource = ClientDataSet2;
