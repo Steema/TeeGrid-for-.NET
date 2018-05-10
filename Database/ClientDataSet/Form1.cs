@@ -126,6 +126,7 @@ namespace ClientDataSet
 					break;
 			}
 
+			bindingNavigator1.Refresh();
 			tTeeGrid1.Focus();
 		}
 
