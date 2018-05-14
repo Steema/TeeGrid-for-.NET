@@ -31,6 +31,7 @@
 			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
 			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this.bExport = new System.Windows.Forms.Button();
 			this.bEdit = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.lbThemes = new System.Windows.Forms.ListBox();
@@ -50,6 +51,7 @@
 			// splitContainer1.Panel1
 			// 
 			this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+			this.splitContainer1.Panel1.Controls.Add(this.bExport);
 			this.splitContainer1.Panel1.Controls.Add(this.bEdit);
 			this.splitContainer1.Panel1.Controls.Add(this.label1);
 			this.splitContainer1.Panel1.Controls.Add(this.lbThemes);
@@ -60,6 +62,16 @@
 			this.splitContainer1.Size = new System.Drawing.Size(968, 649);
 			this.splitContainer1.SplitterDistance = 174;
 			this.splitContainer1.TabIndex = 0;
+			// 
+			// bExport
+			// 
+			this.bExport.Location = new System.Drawing.Point(12, 251);
+			this.bExport.Name = "bExport";
+			this.bExport.Size = new System.Drawing.Size(75, 47);
+			this.bExport.TabIndex = 3;
+			this.bExport.Text = "Export to browser";
+			this.bExport.UseVisualStyleBackColor = true;
+			this.bExport.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// bEdit
 			// 
@@ -137,6 +149,7 @@
 		private System.Windows.Forms.ListBox lbThemes;
 		private Steema.TeeGrid.WinForm.TGrid tTeeGrid1;
 		private System.Windows.Forms.Button bEdit;
+		private System.Windows.Forms.Button bExport;
 	}
 }
 

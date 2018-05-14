@@ -74,5 +74,17 @@ namespace TeeGrid_Themes_WinForm
 			TeeGridEditor editor = TeeGridEditor.Embed(this, this, tTeeGrid1.Editing);
 			editor.Show();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			string tmpPath = System.IO.Path.GetTempPath() + "TeeGrid-jsGrid";
+
+			if (!System.IO.Directory.Exists(tmpPath))
+				System.IO.Directory.CreateDirectory(tmpPath);
+
+			tTeeGrid1.Grid.Export.JSGrid.SavePath = tmpPath;
+			tTeeGrid1.Grid.Export.JSGrid.UsePublicResources = true;
+			tTeeGrid1.Grid.Export.JSGrid.Save();
+		}
 	}
 }
