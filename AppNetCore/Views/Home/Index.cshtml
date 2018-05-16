@@ -1,0 +1,88 @@
+﻿@{
+	ViewData["Title"] = "Steema Sofware - TeeGrid for ASP.NET Core 2 MVC example";
+}
+
+<div class="row">
+	<h1>Introduction to TeeGrid & ASP.NET Core 2 MVC</h1>
+	<p class="lead">TeeGrid for .NET Core renders to jsGrid grids for web pages, an open source project hosted on GitHub. See the jsGrid homepage, <a href="http://js-grid.com/" target="_blank">http://js-grid.com/</a>.</p>
+	<p><a class="btn btn-default" href="https://www.steema.com/product/gridnet" target="_blank">Learn more &raquo;</a>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+		<h3>Basic Grid example.</h3>
+		<iframe id="fr0" src="/Home/GetGrid1" style="border:none; width:740px; height:350px"></iframe>
+	</div>
+	<div class="col-md-2" border="1">
+		<p>We're calling the script from the page in this way:<br /><font color="gray">/Home/GetGrid1</font></p>
+		<br /><br />
+		<p>TeeGrid for NET Core derives from the Microsoft NetStandard Component.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<p>Example accesses a data struct:</p>
+<pre>
+public void GetGrid1()
+{
+  //lock as a precaution
+	lock (renderLock)
+	{
+		Steema.TeeGrid.WinForm.TGrid wGrid = new Steema.TeeGrid.WinForm.TGrid();
+
+		List<THouse> houses = new List<THouse>();
+		Random rnd = new Random();
+
+		//test data
+		for (int t = 0; t < 100; t++)
+		{
+			houses.Add(new THouse() { Address = t.ToString() + rnd.Next(1, 100).ToString() + " St", Floors = rnd.Next(1, 10) });
+		}
+
+		//apply data to grid
+		wGrid.Data = new Steema.TeeGrid.Data.Reflection.VirtualListData<THouse>(houses);
+
+		string gridscript = wGrid.Grid.Export.JSGrid.AsString(false, true);
+
+		byte[] array = System.Text.Encoding.ASCII.GetBytes(gridscript);
+
+		Response.Body.Write(array, 0, array.Length);
+	}
+}</pre>
+
+<p></p>Data format:</p>
+<pre>
+public struct THouse
+{
+	public string Address { get; set; }
+	public int Floors { get; set; }
+}
+</pre>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<h3>System.Data.DataTable</h3>
+		<p>TeeGrid here accesses a System.Data.DataTable. The original data for this example has been sourced via json input and an array of Base64 images. They have been commbined in a strongly-typed table.</p>
+		<iframe id="fr0" scrolling="no" src="/Home/GetGrid2" style="border:none; width:100%; height:250px"></iframe>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<p>example code:</p>
+		<pre>
+DataTable stronglyTyped = StronglyTyped(myTable);
+
+Steema.TeeGrid.NetCore.TGrid wGrid = new Steema.TeeGrid.NetCore.TGrid();
+
+Steema.TeeGrid.Themes.GridThemes.iOS.ApplyTo(wGrid.Grid);
+
+wGrid.DataSource = stronglyTyped;
+wGrid.Grid.Export.JSGrid.Width = "100%";
+
+string gridscript = wGrid.Grid.Export.JSGrid.AsString(false, true);
+
+byte[] array = System.Text.Encoding.ASCII.GetBytes(gridscript);
+
+Response.Body.Write(array, 0, array.Length);
+</pre>
