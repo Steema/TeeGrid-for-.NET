@@ -25,7 +25,7 @@ namespace TeeGrid_Custom_Sorting
 			AddRandomData();
 
 			LastSorted.Ascending = true;
-
+			teeGrid1.SortableColumns = false; //set automatic sorting to false
 			teeGrid1.Header.Sortable = true;
 			teeGrid1.Header.SortRender = CreateSortable();
 			this.BackColor = Color.White;
