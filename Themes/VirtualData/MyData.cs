@@ -16,6 +16,8 @@ namespace VirtualData
 	{
 		public string Street { get; set; }
 		public int Number { get; set; }
+		public string City { get; set; }
+		public string Country { get; set; }
 	}
 
 	public class Person
@@ -89,8 +91,108 @@ namespace VirtualData
 		}
 	}
 
+	public class Location
+	{
+		public string Name { get; set; }
+		public string Country { get; set; }
+	}
+
+	public class SortableBindingList<T> : BindingList<T>
+	{
+		private bool isSortedValue;
+		ListSortDirection sortDirectionValue;
+		PropertyDescriptor sortPropertyValue;
+
+		public SortableBindingList()
+		{
+		}
+
+		public SortableBindingList(IList<T> list)
+		{
+			foreach (object o in list)
+			{
+				this.Add((T)o);
+			}
+		}
+
+		protected override void RemoveSortCore()
+		{
+			//intentionally empty
+		}
+
+		protected override void ApplySortCore(PropertyDescriptor prop,
+				ListSortDirection direction)
+		{
+			Type interfaceType = prop.PropertyType.GetInterface("IComparable");
+
+			if (interfaceType == null && prop.PropertyType.IsValueType)
+			{
+				Type underlyingType = Nullable.GetUnderlyingType(prop.PropertyType);
+
+				if (underlyingType != null)
+				{
+					interfaceType = underlyingType.GetInterface("IComparable");
+				}
+			}
+
+			if (interfaceType != null)
+			{
+				sortPropertyValue = prop;
+				sortDirectionValue = direction;
+
+				IEnumerable<T> query = base.Items;
+
+				if (direction == ListSortDirection.Ascending)
+				{
+					query = query.OrderBy(i => prop.GetValue(i));
+				}
+				else
+				{
+					query = query.OrderByDescending(i => prop.GetValue(i));
+				}
+
+				int newIndex = 0;
+				foreach (object item in query)
+				{
+					this.Items[newIndex] = (T)item;
+					newIndex++;
+				}
+
+				isSortedValue = true;
+				this.OnListChanged(new ListChangedEventArgs(ListChangedType.Reset, -1));
+			}
+			else
+			{
+				throw new NotSupportedException("Cannot sort by " + prop.Name +
+						". This" + prop.PropertyType.ToString() +
+						" does not implement IComparable");
+			}
+		}
+
+		protected override PropertyDescriptor SortPropertyCore
+		{
+			get { return sortPropertyValue; }
+		}
+
+		protected override ListSortDirection SortDirectionCore
+		{
+			get { return sortDirectionValue; }
+		}
+
+		protected override bool SupportsSortingCore
+		{
+			get { return true; }
+		}
+
+		protected override bool IsSortedCore
+		{
+			get { return isSortedValue; }
+		}
+	}
+
 	public static class MyData
 	{
+
 		public static DataTable FillMyData<T>( int count)
 		{
 			if(typeof(T) == typeof(Person))
@@ -99,16 +201,16 @@ namespace VirtualData
 				FillMyData(personList, count);
 				return personList.ToDataTable();
 			}
-			else if (typeof(T) == typeof(Car))
+			else if (typeof(T) == typeof(Address))
 			{
-				List<Car> carList = new List<Car>();
-				FillMyData(carList, count);
-				return carList.ToDataTable();
+				List<Address> addressList = new List<Address>();
+				FillMyData(addressList, count);
+				return addressList.ToDataTable();
 			}
 			return null;
 		}
 
-		public static void FillMyData(List<Person> data, int count)
+		public static void FillMyData(IList<Person> data, int count)
 		{
 			data.Clear();
 			for (int t = 0; t < count; t++)
@@ -117,11 +219,19 @@ namespace VirtualData
 			}
 		}
 
-		public static void FillMyData(List<Car> data, int count)
+		public static void FillMyData(IList<Car> data, int count)
 		{
 			for (int t = 0; t < count; t++)
 			{
 				data.Add(RandomCar);
+			}
+		}
+
+		public static void FillMyData(IList<Address> data, int count)
+		{
+			for (int t = 0; t < count; t++)
+			{
+				data.Add(RandomAddress);
 			}
 		}
 
@@ -156,7 +266,7 @@ namespace VirtualData
 			}
 		}
 
-		private static string RandomAddress
+		private static string RandomStreet
 		{
 			get
 			{
@@ -172,6 +282,27 @@ namespace VirtualData
 			}
 		}
 
+		private static List<Location> _locations;
+
+		private static Location RandomLocation
+		{
+			get
+			{
+				if(_locations == null)
+				{
+					_locations = new List<Location>();
+					_locations.Add(new Location() { Name = "New York", Country = "USA" });
+					_locations.Add(new Location() { Name = "Barcelona", Country = "Catalonia" });
+					_locations.Add(new Location() { Name = "Tokyo", Country = "Japan" });
+					_locations.Add(new Location() { Name = "Sao Paulo", Country = "Brazil" });
+					_locations.Add(new Location() { Name = "Santa Cruz", Country = "USA" });
+					_locations.Add(new Location() { Name = "Oslo", Country = "Norway" });
+				}
+
+				return _locations[Random(6)];
+			}
+		}
+
 
 		private static DateTime RandomDate
 		{
@@ -182,15 +313,10 @@ namespace VirtualData
 		{
 			get
 			{
-				Address address = new Address
-				{
-					Street = RandomAddress,
-					Number = 1 + Random(1000)
-				};
 				Person person = new Person
 				{
 					Name = RandomName,
-					Address = address,
+					Address = RandomAddress,
 					BirthDate = RandomDate,
 					Children = Random(5),
 					Extravert = Random(10) < 5,
@@ -198,6 +324,22 @@ namespace VirtualData
 					Car = RandomCar
 				};
 				return person;
+			}
+		}
+
+		private static Address RandomAddress
+		{
+			get
+			{
+				Location location = RandomLocation;
+				Address address = new Address
+				{
+					Street = RandomStreet,
+					Number = 1 + Random(1000),
+					City = location.Name,
+					Country = location.Country
+				};
+				return address;
 			}
 		}
 

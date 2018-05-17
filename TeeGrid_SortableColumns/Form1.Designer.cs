@@ -29,21 +29,21 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter2 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
-			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling2 = new Steema.TeeGrid.RowGroup.GridScrolling();
+			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
+			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.rbPerson = new System.Windows.Forms.RadioButton();
-			this.rbCars = new System.Windows.Forms.RadioButton();
+			this.rbAddress = new System.Windows.Forms.RadioButton();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.cbAsList = new System.Windows.Forms.CheckBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.rbAsSortableBindingList = new System.Windows.Forms.RadioButton();
 			this.rbAsDataTable = new System.Windows.Forms.RadioButton();
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
-			this.tGrid1 = new Steema.TeeGrid.WinForm.TGrid();
 			this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-			this.cbAsList = new System.Windows.Forms.CheckBox();
+			this.tGrid1 = new Steema.TeeGrid.WinForm.TGrid();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -70,18 +70,18 @@
 			// splitContainer1.Panel2
 			// 
 			this.splitContainer1.Panel2.Controls.Add(this.tGrid1);
-			this.splitContainer1.Size = new System.Drawing.Size(794, 469);
-			this.splitContainer1.SplitterDistance = 220;
+			this.splitContainer1.Size = new System.Drawing.Size(1249, 469);
+			this.splitContainer1.SplitterDistance = 182;
 			this.splitContainer1.TabIndex = 0;
 			// 
 			// groupBox4
 			// 
 			this.groupBox4.Controls.Add(this.rbPerson);
-			this.groupBox4.Controls.Add(this.rbCars);
+			this.groupBox4.Controls.Add(this.rbAddress);
 			this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.groupBox4.Location = new System.Drawing.Point(0, 392);
 			this.groupBox4.Name = "groupBox4";
-			this.groupBox4.Size = new System.Drawing.Size(220, 77);
+			this.groupBox4.Size = new System.Drawing.Size(182, 77);
 			this.groupBox4.TabIndex = 2;
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "Type of Data";
@@ -96,18 +96,18 @@
 			this.rbPerson.Text = "T is Person";
 			this.rbPerson.UseVisualStyleBackColor = true;
 			// 
-			// rbCars
+			// rbAddress
 			// 
-			this.rbCars.AutoSize = true;
-			this.rbCars.Checked = true;
-			this.rbCars.Location = new System.Drawing.Point(7, 19);
-			this.rbCars.Name = "rbCars";
-			this.rbCars.Size = new System.Drawing.Size(66, 17);
-			this.rbCars.TabIndex = 0;
-			this.rbCars.TabStop = true;
-			this.rbCars.Text = "T is Cars";
-			this.rbCars.UseVisualStyleBackColor = true;
-			this.rbCars.CheckedChanged += new System.EventHandler(this.typeOfData_CheckedChanged);
+			this.rbAddress.AutoSize = true;
+			this.rbAddress.Checked = true;
+			this.rbAddress.Location = new System.Drawing.Point(7, 19);
+			this.rbAddress.Name = "rbAddress";
+			this.rbAddress.Size = new System.Drawing.Size(83, 17);
+			this.rbAddress.TabIndex = 0;
+			this.rbAddress.TabStop = true;
+			this.rbAddress.Text = "T is Address";
+			this.rbAddress.UseVisualStyleBackColor = true;
+			this.rbAddress.CheckedChanged += new System.EventHandler(this.typeOfData_CheckedChanged);
 			// 
 			// groupBox1
 			// 
@@ -116,7 +116,7 @@
 			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.groupBox1.Location = new System.Drawing.Point(0, 17);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(220, 151);
+			this.groupBox1.Size = new System.Drawing.Size(182, 151);
 			this.groupBox1.TabIndex = 1;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Source of Data";
@@ -130,6 +130,17 @@
 			this.groupBox3.TabIndex = 1;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "TGrid Source";
+			// 
+			// cbAsList
+			// 
+			this.cbAsList.AutoSize = true;
+			this.cbAsList.Location = new System.Drawing.Point(6, 19);
+			this.cbAsList.Name = "cbAsList";
+			this.cbAsList.Size = new System.Drawing.Size(76, 17);
+			this.cbAsList.TabIndex = 0;
+			this.cbAsList.Text = "As List<T>";
+			this.cbAsList.UseVisualStyleBackColor = true;
+			this.cbAsList.CheckedChanged += new System.EventHandler(this.cbAsList_CheckedChanged);
 			// 
 			// groupBox2
 			// 
@@ -175,7 +186,7 @@
 			this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.checkBox1.Location = new System.Drawing.Point(0, 0);
 			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(220, 17);
+			this.checkBox1.Size = new System.Drawing.Size(182, 17);
 			this.checkBox1.TabIndex = 0;
 			this.checkBox1.Text = "SortableColumns";
 			this.checkBox1.UseVisualStyleBackColor = true;
@@ -187,32 +198,21 @@
 			this.tGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tGrid1.Location = new System.Drawing.Point(0, 0);
 			this.tGrid1.Name = "tGrid1";
-			this.tGrid1.Painter = gdiPlusPainter2;
-			gridScrolling2.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
-			gridScrolling2.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
-			gridScrolling2.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
-			this.tGrid1.Scrolling = gridScrolling2;
-			this.tGrid1.Size = new System.Drawing.Size(570, 469);
+			this.tGrid1.Painter = gdiPlusPainter1;
+			gridScrolling1.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling1.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling1.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
+			this.tGrid1.Scrolling = gridScrolling1;
+			this.tGrid1.Size = new System.Drawing.Size(1063, 469);
 			this.tGrid1.SortableColumns = true;
 			this.tGrid1.TabIndex = 0;
 			this.tGrid1.Text = "tGrid1";
-			// 
-			// cbAsList
-			// 
-			this.cbAsList.AutoSize = true;
-			this.cbAsList.Location = new System.Drawing.Point(6, 19);
-			this.cbAsList.Name = "cbAsList";
-			this.cbAsList.Size = new System.Drawing.Size(76, 17);
-			this.cbAsList.TabIndex = 0;
-			this.cbAsList.Text = "As List<T>";
-			this.cbAsList.UseVisualStyleBackColor = true;
-			this.cbAsList.CheckedChanged += new System.EventHandler(this.cbAsList_CheckedChanged);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(794, 469);
+			this.ClientSize = new System.Drawing.Size(1249, 469);
 			this.Controls.Add(this.splitContainer1);
 			this.Name = "Form1";
 			this.Text = "SortableColumns";
@@ -245,7 +245,7 @@
 		private System.Windows.Forms.RadioButton rbAsDataTable;
 		private System.Windows.Forms.GroupBox groupBox4;
 		private System.Windows.Forms.RadioButton rbPerson;
-		private System.Windows.Forms.RadioButton rbCars;
+		private System.Windows.Forms.RadioButton rbAddress;
 		private System.Windows.Forms.BindingSource bindingSource1;
 		private System.Windows.Forms.CheckBox cbAsList;
 	}
