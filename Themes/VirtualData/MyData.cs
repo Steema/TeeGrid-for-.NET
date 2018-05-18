@@ -66,31 +66,6 @@ namespace VirtualData
 
 	}
 
-	public static class Extentions
-	{
-		public static DataTable ToDataTable<T>(this IList<T> data)
-		{
-			PropertyDescriptorCollection props =
-			TypeDescriptor.GetProperties(typeof(T));
-			DataTable table = new DataTable();
-			for (int i = 0; i < props.Count; i++)
-			{
-				PropertyDescriptor prop = props[i];
-				table.Columns.Add(prop.Name, prop.PropertyType);
-			}
-			object[] values = new object[props.Count];
-			foreach (T item in data)
-			{
-				for (int i = 0; i < values.Length; i++)
-				{
-					values[i] = props[i].GetValue(item);
-				}
-				table.Rows.Add(values);
-			}
-			return table;
-		}
-	}
-
 	public class Location
 	{
 		public string Name { get; set; }
@@ -192,24 +167,6 @@ namespace VirtualData
 
 	public static class MyData
 	{
-
-		public static DataTable FillMyData<T>( int count)
-		{
-			if(typeof(T) == typeof(Person))
-			{
-				List<Person> personList = new List<Person>();
-				FillMyData(personList, count);
-				return personList.ToDataTable();
-			}
-			else if (typeof(T) == typeof(Address))
-			{
-				List<Address> addressList = new List<Address>();
-				FillMyData(addressList, count);
-				return addressList.ToDataTable();
-			}
-			return null;
-		}
-
 		public static void FillMyData(IList<Person> data, int count)
 		{
 			data.Clear();

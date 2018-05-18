@@ -30,7 +30,6 @@ namespace TeeGrid_SortableColumns
 
 		private void ResetDataSources()
 		{
-			if(!string.IsNullOrEmpty(bindingSource1.Sort)) bindingSource1.Sort = string.Empty;
 			bindingSource1.DataSource = null;
 			tGrid1.DataSource = null;
 			tGrid1.Data = null;
@@ -38,51 +37,28 @@ namespace TeeGrid_SortableColumns
 
 		private void sourceOfData_CheckedChanged(object sender, EventArgs e)
 		{
-			if (rbAsDataTable.Checked)
+			if (rbBindingSource.Checked)
 			{
 				ResetDataSources();
-				cbAsList.Checked = false;
-				DataTable tableSource = null;
-				if (rbAddress.Checked)
-					tableSource = MyData.FillMyData<Address>(count);
-				else
-					tableSource = MyData.FillMyData<Person>(count);
-				bindingSource1.DataSource = tableSource;
-				tGrid1.DataSource = bindingSource1;
-			}
-			else if(rbAsSortableBindingList.Checked)
-			{
-				ResetDataSources();
-				cbAsList.Checked = false;
 				if (rbAddress.Checked)
 				{
-					SortableBindingList<Address> sortableList = new SortableBindingList<Address>();
-					MyData.FillMyData(sortableList, count);
-					bindingSource1.DataSource = sortableList;
+					List<Address> addresses = new List<Address>();
+					MyData.FillMyData(addresses, count);
+					bindingSource1.DataSource = typeof(Address);
+					addresses.ForEach(x => bindingSource1.Add(x));
 				}
 				else
 				{
-					SortableBindingList<Person> sortableList = new SortableBindingList<Person>();
-					MyData.FillMyData(sortableList, count);
-					bindingSource1.DataSource = sortableList;
+					List<Person> people = new List<Person>();
+					MyData.FillMyData(people, count);
+					bindingSource1.DataSource = typeof(Person);
+					people.ForEach(x => bindingSource1.Add(x));
 				}
 				tGrid1.DataSource = bindingSource1;
 			}
-		}
-
-		private void typeOfData_CheckedChanged(object sender, EventArgs e)
-		{
-			sourceOfData_CheckedChanged(this, EventArgs.Empty);
-			cbAsList_CheckedChanged(this, EventArgs.Empty);
-		}
-
-		private void cbAsList_CheckedChanged(object sender, EventArgs e)
-		{
-			if (cbAsList.Checked)
+			else
 			{
 				ResetDataSources();
-				rbAsSortableBindingList.Checked = false;
-				rbAsDataTable.Checked = false;
 				if (rbAddress.Checked)
 				{
 					List<Address> addresses = new List<Address>();
@@ -96,6 +72,11 @@ namespace TeeGrid_SortableColumns
 					tGrid1.Data = new VirtualListData<Person>(people);
 				}
 			}
+		}
+
+		private void typeOfData_CheckedChanged(object sender, EventArgs e)
+		{
+			sourceOfData_CheckedChanged(this, EventArgs.Empty);
 		}
 	}
 }
