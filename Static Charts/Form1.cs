@@ -15,6 +15,7 @@ using Steema.TeeGrid.Format;
 using Steema.TeeGrid.Columns;
 using Steema.TeeGrid.Data.Reflection;
 using Steema.TeeGrid.WinForm.Editors;
+using Steema.TeeGrid.Header;
 
 namespace TeeGrid_Static_Charts
 {
@@ -26,6 +27,10 @@ namespace TeeGrid_Static_Charts
 			this.BackColor = Color.White;
 			Steema.TeeGrid.Themes.GridThemes.SilverFlat.ApplyTo(tTeeGrid1.Grid);
 			tTeeGrid1.Rows.RowLines.Visible = true;
+
+			SortableHeader header = tTeeGrid1.Header.SortRender as SortableHeader;
+			header.SortBy += Header_SortBy;
+
 			AddRandomData();
 
 			tTeeGrid1.Data = new VirtualListData<TLocation>(Locations);
@@ -38,6 +43,11 @@ namespace TeeGrid_Static_Charts
 			tChart1[0].ColorEach = true;
 
 			PrepareChartColumn();
+		}
+
+		private void Header_SortBy(object sender, SortableColumnEventArgs e)
+		{
+			Locations = e.SortedData as List<TLocation>;
 		}
 
 		private void PrepareChartColumn()
@@ -123,15 +133,25 @@ namespace TeeGrid_Static_Charts
 		}
 	}
 
+	public class Temperatures : List<int>, IComparable<List<int>>
+	{
+		public int CompareTo(List<int> other)
+		{
+			if (other == null) return 1;
+			return this.Average().CompareTo(other.Average()); //compare the average
+		}
+	}
 
-	public class TLocation
+
+	public class TLocation 
 	{
 		private static Random rnd = new Random();
 		public string Name { get; set; }
-		public List<int> Temperatures { get; set; }
+		public Temperatures Temperatures { get; set; }
+
 		public void SetRandom()
 		{
-			Temperatures = new List<int>();
+			Temperatures = new Temperatures();
 			
 			for (int t = 0; t < 5; t++)
 			{
