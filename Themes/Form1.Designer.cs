@@ -28,18 +28,22 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
-			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
+			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter2 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
+			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling2 = new Steema.TeeGrid.RowGroup.GridScrolling();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.bExport = new System.Windows.Forms.Button();
 			this.bEdit = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.lbThemes = new System.Windows.Forms.ListBox();
 			this.tTeeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
+			this.gbFormat = new System.Windows.Forms.GroupBox();
+			this.rbNative = new System.Windows.Forms.RadioButton();
+			this.rbJsGrid = new System.Windows.Forms.RadioButton();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
+			this.gbFormat.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// splitContainer1
@@ -51,6 +55,7 @@
 			// splitContainer1.Panel1
 			// 
 			this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+			this.splitContainer1.Panel1.Controls.Add(this.gbFormat);
 			this.splitContainer1.Panel1.Controls.Add(this.bExport);
 			this.splitContainer1.Panel1.Controls.Add(this.bEdit);
 			this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -116,14 +121,48 @@
 			this.tTeeGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tTeeGrid1.Location = new System.Drawing.Point(0, 0);
 			this.tTeeGrid1.Name = "tTeeGrid1";
-			this.tTeeGrid1.Painter = gdiPlusPainter1;
-			gridScrolling1.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
-			gridScrolling1.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
-			gridScrolling1.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
-			this.tTeeGrid1.Scrolling = gridScrolling1;
+			this.tTeeGrid1.Painter = gdiPlusPainter2;
+			gridScrolling2.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
+			gridScrolling2.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
+			gridScrolling2.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
+			this.tTeeGrid1.Scrolling = gridScrolling2;
 			this.tTeeGrid1.Size = new System.Drawing.Size(790, 649);
+			this.tTeeGrid1.SortableColumns = true;
 			this.tTeeGrid1.TabIndex = 0;
 			this.tTeeGrid1.Text = "tTeeGrid1";
+			// 
+			// gbFormat
+			// 
+			this.gbFormat.Controls.Add(this.rbJsGrid);
+			this.gbFormat.Controls.Add(this.rbNative);
+			this.gbFormat.Location = new System.Drawing.Point(12, 313);
+			this.gbFormat.Name = "gbFormat";
+			this.gbFormat.Size = new System.Drawing.Size(128, 79);
+			this.gbFormat.TabIndex = 5;
+			this.gbFormat.TabStop = false;
+			this.gbFormat.Text = "HTML Export Format";
+			// 
+			// rbNative
+			// 
+			this.rbNative.AutoSize = true;
+			this.rbNative.Checked = true;
+			this.rbNative.Location = new System.Drawing.Point(17, 29);
+			this.rbNative.Name = "rbNative";
+			this.rbNative.Size = new System.Drawing.Size(54, 17);
+			this.rbNative.TabIndex = 0;
+			this.rbNative.TabStop = true;
+			this.rbNative.Text = "&native";
+			this.rbNative.UseVisualStyleBackColor = true;
+			// 
+			// rbJsGrid
+			// 
+			this.rbJsGrid.AutoSize = true;
+			this.rbJsGrid.Location = new System.Drawing.Point(17, 52);
+			this.rbJsGrid.Name = "rbJsGrid";
+			this.rbJsGrid.Size = new System.Drawing.Size(51, 17);
+			this.rbJsGrid.TabIndex = 1;
+			this.rbJsGrid.Text = "&jsGrid";
+			this.rbJsGrid.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
@@ -138,6 +177,8 @@
 			this.splitContainer1.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
+			this.gbFormat.ResumeLayout(false);
+			this.gbFormat.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -150,6 +191,9 @@
 		private Steema.TeeGrid.WinForm.TGrid tTeeGrid1;
 		private System.Windows.Forms.Button bEdit;
 		private System.Windows.Forms.Button bExport;
+		private System.Windows.Forms.GroupBox gbFormat;
+		private System.Windows.Forms.RadioButton rbJsGrid;
+		private System.Windows.Forms.RadioButton rbNative;
 	}
 }
 

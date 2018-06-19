@@ -77,14 +77,36 @@ namespace TeeGrid_Themes_WinForm
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			string tmpPath = System.IO.Path.GetTempPath() + "TeeGrid-jsGrid";
+			string tmpPath = System.IO.Path.GetTempPath();
+			string path;
 
-			if (!System.IO.Directory.Exists(tmpPath))
-				System.IO.Directory.CreateDirectory(tmpPath);
+			if (rbNative.Checked)
+			{
+				path = tmpPath + "TeeGrid-native";
 
-			tTeeGrid1.Grid.Export.JSGrid.SavePath = tmpPath;
-			tTeeGrid1.Grid.Export.JSGrid.UsePublicResources = true;
-			tTeeGrid1.Grid.Export.JSGrid.Save();
+				if (!System.IO.Directory.Exists(path))
+					System.IO.Directory.CreateDirectory(path);
+
+				tTeeGrid1.Export.Html.Save(path + @"\index.html");
+			}
+			else
+			{
+				path = tmpPath + "TeeGrid-jsGrid";
+
+				if (!System.IO.Directory.Exists(path))
+					System.IO.Directory.CreateDirectory(path);
+
+				tTeeGrid1.Grid.Export.JSGrid.SavePath = path;
+				tTeeGrid1.Grid.Export.JSGrid.UsePublicResources = true;
+				tTeeGrid1.Grid.Export.JSGrid.Save();
+			}
+
+			System.Diagnostics.Process.Start(path + @"\index.html");
+		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
