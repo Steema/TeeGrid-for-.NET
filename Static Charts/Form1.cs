@@ -28,14 +28,14 @@ namespace TeeGrid_Static_Charts
 			Steema.TeeGrid.Themes.GridThemes.SilverFlat.ApplyTo(tTeeGrid1.Grid);
 			tTeeGrid1.Rows.RowLines.Visible = true;
 
-			SortableHeader header = tTeeGrid1.Header.SortRender as SortableHeader;
-			header.SortBy += Header_SortBy;
-
 			AddRandomData();
 
 			tTeeGrid1.Data = new VirtualListData<TLocation>(Locations);
 
-			tTeeGrid1.Rows.Height.Automatic = false;
+      SortableHeader header = tTeeGrid1.Header.SortRender as SortableHeader;
+      header.SortBy += Header_SortBy;
+
+      tTeeGrid1.Rows.Height.Automatic = false;
 			tTeeGrid1.Rows.Height.Value = 200;
 			tChart1.Panel.Bevel.Inner = Steema.TeeChart.Drawing.BevelStyles.None;
 			tChart1.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;

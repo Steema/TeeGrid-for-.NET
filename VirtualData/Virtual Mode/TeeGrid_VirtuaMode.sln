@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeGrid_VirtuaMode", "TeeGrid_VirtuaMode.csproj", "{2934FFAE-F714-4743-9374-0CF2D963DF88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{54C6D0E7-30BC-4904-8E6D-F407BE28FB1B}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2934FFAE-F714-4743-9374-0CF2D963DF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2934FFAE-F714-4743-9374-0CF2D963DF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2934FFAE-F714-4743-9374-0CF2D963DF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2934FFAE-F714-4743-9374-0CF2D963DF88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECE9F91F-A299-4846-ADE0-764920CA057A}
+	EndGlobalSection
+EndGlobal

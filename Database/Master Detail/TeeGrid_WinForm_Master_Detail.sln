@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeGrid_WinForm_Master_Detail", "TeeGrid_WinForm_Master_Detail.csproj", "{AE683860-3790-481D-B96B-3A2E3DB3C376}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{F0C4ADD8-557C-48B8-AE04-3B62861AF255}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE683860-3790-481D-B96B-3A2E3DB3C376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE683860-3790-481D-B96B-3A2E3DB3C376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE683860-3790-481D-B96B-3A2E3DB3C376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE683860-3790-481D-B96B-3A2E3DB3C376}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7860A01-0D49-4177-A690-E92AE637D500}
+	EndGlobalSection
+EndGlobal

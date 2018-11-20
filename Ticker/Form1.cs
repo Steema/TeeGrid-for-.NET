@@ -32,7 +32,7 @@ namespace TeeGrid_WinForm_Ticker
 			Ticker = new GridTicker(tTeeGrid1.Grid.Current);
 
 			//GridTickerEditor tEditor = new GridTickerEditor();
-			GridTickerEditor.Embed(tTeeGrid1.Grid, splitContainer2.Panel2, Ticker);
+			GridTickerEditor.Embed(splitContainer2.Panel2, Ticker);
 			//TickerEditor
 
 			timer1.Enabled = true;

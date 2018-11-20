@@ -44,6 +44,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TeeGrid.WinForm, Version=1.2018.11.19, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeGrid.NET.1.2018.11.19\lib\net\TeeGrid.WinForm.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -78,6 +81,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,12 +113,6 @@
     <None Include="Resources\ClientDataSet2NET.xss">
       <DependentUpon>ClientDataSet2NET.xsd</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\TCROOT\TeeBINET\Grid\WinForm\TeeGrid.WinForm.csproj">
-      <Project>{3e3cf3f2-4361-461a-bd80-a5529350f5e4}</Project>
-      <Name>TeeGrid.WinForm</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ClientDataSet1NET.xml" />

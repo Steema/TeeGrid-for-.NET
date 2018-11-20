@@ -59,7 +59,7 @@ namespace TeeGrid_WinForm_Row_Heights
 
 		private void Button1_Click(object sender, EventArgs e)
 		{
-      TeeGridEditor editor = TeeGridEditor.Embed(this, this, tTeeGrid1.Editing);
+      TeeGridEditor editor = TeeGridEditor.Embed(this, tTeeGrid1.Editing);
       editor.Show();
 		}
 
