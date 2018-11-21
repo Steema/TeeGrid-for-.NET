@@ -41,8 +41,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TeeGrid.WinForm, Version=1.2018.11.19, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeGrid.NET.1.2018.11.19\lib\net\TeeGrid.WinForm.dll</HintPath>
+    <Reference Include="TeeGrid.WinForm, Version=1.2018.11.20, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeGrid.NET.1.2018.11.20\lib\net\TeeGrid.WinForm.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
