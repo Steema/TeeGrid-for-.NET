@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TechProductsLtdDataSet" targetNamespace="http://tempuri.org/TechProductsLtdDataSet.xsd" xmlns:mstns="http://tempuri.org/TechProductsLtdDataSet.xsd" xmlns="http://tempuri.org/TechProductsLtdDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TechProductsLtdConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TechProductsLtdConnectionString (Settings)" PropertyReference="ApplicationSettings.Grid_Paging.Properties.Settings.GlobalReference.Default.TechProductsLtdConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Fact_Orders QueryTableAdapter" GeneratorDataComponentClassName="Fact_Orders_QueryTableAdapter" Name="Fact_Orders Query" UserDataComponentName="Fact_Orders QueryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TechProductsLtdConnectionString (Settings)" DbObjectName="Fact_Orders Query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Cod_Customer, Orderdate, Invoice_year, Invoice_num, Product_code, Pack_code FROM [Fact_Orders Query]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Cod_Customer" DataSetColumn="Cod_Customer" />
+              <Mapping SourceColumn="Orderdate" DataSetColumn="Orderdate" />
+              <Mapping SourceColumn="Invoice_year" DataSetColumn="Invoice_year" />
+              <Mapping SourceColumn="Invoice_num" DataSetColumn="Invoice_num" />
+              <Mapping SourceColumn="Product_code" DataSetColumn="Product_code" />
+              <Mapping SourceColumn="Pack_code" DataSetColumn="Pack_code" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Lookup_CustomersTableAdapter" GeneratorDataComponentClassName="Lookup_CustomersTableAdapter" Name="Lookup_Customers" UserDataComponentName="Lookup_CustomersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TechProductsLtdConnectionString (Settings)" DbObjectName="Lookup_Customers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Lookup_Customers` WHERE ((`Cod_Customer` = ?) AND ((? = 1 AND `Contact` IS NULL) OR (`Contact` = ?)) AND ((? = 1 AND `Addr` IS NULL) OR (`Addr` = ?)) AND ((? = 1 AND `Town` IS NULL) OR (`Town` = ?)) AND ((? = 1 AND `State_code` IS NULL) OR (`State_code` = ?)) AND ((? = 1 AND `State_name` IS NULL) OR (`State_name` = ?)) AND ((? = 1 AND `ZIP` IS NULL) OR (`ZIP` = ?)) AND ((? = 1 AND `Country_code_A2` IS NULL) OR (`Country_code_A2` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Tel` IS NULL) OR (`Tel` = ?)) AND ((? = 1 AND `Company` IS NULL) OR (`Company` = ?)) AND ((? = 1 AND `Domain` IS NULL) OR (`Domain` = ?)) AND ((? = 1 AND `Discount_code` IS NULL) OR (`Discount_code` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Cod_Customer" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cod_Customer" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Contact" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Contact" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Addr" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Addr" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Addr" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Addr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Town" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Town" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Town" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Town" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_State_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="State_code" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_State_code" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_State_name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="State_name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_State_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ZIP" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ZIP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_ZIP" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ZIP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Country_code_A2" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Country_code_A2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Country_code_A2" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Country_code_A2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Email" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Email" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Tel" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Tel" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Company" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Company" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Company" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Company" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Domain" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Domain" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Domain" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Domain" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Discount_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Discount_code" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Discount_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Discount_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Lookup_Customers` (`Contact`, `Addr`, `Town`, `State_code`, `State_name`, `ZIP`, `Country_code_A2`, `Email`, `Tel`, `Company`, `Domain`, `Discount_code`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Contact" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Addr" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Addr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Town" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Town" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="State_code" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="State_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="ZIP" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ZIP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Country_code_A2" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Country_code_A2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Email" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Tel" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Company" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Company" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Domain" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Domain" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Discount_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Discount_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Cod_Customer, Contact, Addr, Town, State_code, State_name, ZIP, Country_code_A2, Email, Tel, Company, [Domain], Discount_code FROM Lookup_Customers</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Lookup_Customers` SET `Contact` = ?, `Addr` = ?, `Town` = ?, `State_code` = ?, `State_name` = ?, `ZIP` = ?, `Country_code_A2` = ?, `Email` = ?, `Tel` = ?, `Company` = ?, `Domain` = ?, `Discount_code` = ? WHERE ((`Cod_Customer` = ?) AND ((? = 1 AND `Contact` IS NULL) OR (`Contact` = ?)) AND ((? = 1 AND `Addr` IS NULL) OR (`Addr` = ?)) AND ((? = 1 AND `Town` IS NULL) OR (`Town` = ?)) AND ((? = 1 AND `State_code` IS NULL) OR (`State_code` = ?)) AND ((? = 1 AND `State_name` IS NULL) OR (`State_name` = ?)) AND ((? = 1 AND `ZIP` IS NULL) OR (`ZIP` = ?)) AND ((? = 1 AND `Country_code_A2` IS NULL) OR (`Country_code_A2` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Tel` IS NULL) OR (`Tel` = ?)) AND ((? = 1 AND `Company` IS NULL) OR (`Company` = ?)) AND ((? = 1 AND `Domain` IS NULL) OR (`Domain` = ?)) AND ((? = 1 AND `Discount_code` IS NULL) OR (`Discount_code` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Contact" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Addr" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Addr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Town" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Town" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="State_code" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="State_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="ZIP" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ZIP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Country_code_A2" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Country_code_A2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Email" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Tel" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Company" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Company" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Domain" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Domain" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Discount_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Discount_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Cod_Customer" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cod_Customer" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Contact" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Contact" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Addr" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Addr" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Addr" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Addr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Town" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Town" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Town" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Town" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_State_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="State_code" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_State_code" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_State_name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="State_name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_State_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ZIP" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ZIP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_ZIP" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ZIP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Country_code_A2" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Country_code_A2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Country_code_A2" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Country_code_A2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Email" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Email" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Tel" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Tel" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Company" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Company" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Company" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Company" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Domain" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Domain" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Domain" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Domain" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Discount_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Discount_code" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Discount_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Discount_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cod_Customer" DataSetColumn="Cod_Customer" />
+              <Mapping SourceColumn="Contact" DataSetColumn="Contact" />
+              <Mapping SourceColumn="Addr" DataSetColumn="Addr" />
+              <Mapping SourceColumn="Town" DataSetColumn="Town" />
+              <Mapping SourceColumn="State_code" DataSetColumn="State_code" />
+              <Mapping SourceColumn="State_name" DataSetColumn="State_name" />
+              <Mapping SourceColumn="ZIP" DataSetColumn="ZIP" />
+              <Mapping SourceColumn="Country_code_A2" DataSetColumn="Country_code_A2" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Tel" DataSetColumn="Tel" />
+              <Mapping SourceColumn="Company" DataSetColumn="Company" />
+              <Mapping SourceColumn="Domain" DataSetColumn="Domain" />
+              <Mapping SourceColumn="Discount_code" DataSetColumn="Discount_code" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Lookup_ProductsTableAdapter" GeneratorDataComponentClassName="Lookup_ProductsTableAdapter" Name="Lookup_Products" UserDataComponentName="Lookup_ProductsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TechProductsLtdConnectionString (Settings)" DbObjectName="Lookup_Products" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Lookup_Products` WHERE (((? = 1 AND `ID` IS NULL) OR (`ID` = ?)) AND (`Product_code` = ?) AND ((? = 1 AND `Product_desc` IS NULL) OR (`Product_desc` = ?)) AND ((? = 1 AND `Prod_type_code` IS NULL) OR (`Prod_type_code` = ?)) AND ((? = 1 AND `Prod_List_price` IS NULL) OR (`Prod_List_price` = ?)) AND ((? = 1 AND `InternalDesc` IS NULL) OR (`InternalDesc` = ?)) AND ((? = 1 AND `Old` IS NULL) OR (`Old` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Product_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Product_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Product_desc" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Product_desc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Product_desc" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Product_desc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Prod_type_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Prod_type_code" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Prod_type_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Prod_type_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Prod_List_price" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Prod_List_price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Prod_List_price" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Prod_List_price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_InternalDesc" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="InternalDesc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_InternalDesc" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="InternalDesc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Old" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Old" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Original_Old" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Old" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Lookup_Products` (`Product_code`, `Product_desc`, `Prod_type_code`, `Prod_List_price`, `InternalDesc`, `Old`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Product_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Product_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Product_desc" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Product_desc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Prod_type_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Prod_type_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Prod_List_price" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Prod_List_price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InternalDesc" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="InternalDesc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Old" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Old" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Product_code, Product_desc, Prod_type_code, Prod_List_price, InternalDesc, Old FROM Lookup_Products</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Lookup_Products` SET `Product_code` = ?, `Product_desc` = ?, `Prod_type_code` = ?, `Prod_List_price` = ?, `InternalDesc` = ?, `Old` = ? WHERE (((? = 1 AND `ID` IS NULL) OR (`ID` = ?)) AND (`Product_code` = ?) AND ((? = 1 AND `Product_desc` IS NULL) OR (`Product_desc` = ?)) AND ((? = 1 AND `Prod_type_code` IS NULL) OR (`Prod_type_code` = ?)) AND ((? = 1 AND `Prod_List_price` IS NULL) OR (`Prod_List_price` = ?)) AND ((? = 1 AND `InternalDesc` IS NULL) OR (`InternalDesc` = ?)) AND ((? = 1 AND `Old` IS NULL) OR (`Old` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Product_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Product_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Product_desc" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Product_desc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Prod_type_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Prod_type_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Prod_List_price" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Prod_List_price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InternalDesc" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="InternalDesc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Old" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Old" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Product_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Product_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Product_desc" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Product_desc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Product_desc" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Product_desc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Prod_type_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Prod_type_code" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Prod_type_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Prod_type_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Prod_List_price" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Prod_List_price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Prod_List_price" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Prod_List_price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_InternalDesc" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="InternalDesc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_InternalDesc" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="InternalDesc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Old" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Old" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Original_Old" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Old" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Product_code" DataSetColumn="Product_code" />
+              <Mapping SourceColumn="Product_desc" DataSetColumn="Product_desc" />
+              <Mapping SourceColumn="Prod_type_code" DataSetColumn="Prod_type_code" />
+              <Mapping SourceColumn="Prod_List_price" DataSetColumn="Prod_List_price" />
+              <Mapping SourceColumn="InternalDesc" DataSetColumn="InternalDesc" />
+              <Mapping SourceColumn="Old" DataSetColumn="Old" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Lookup_ProductPacksTableAdapter" GeneratorDataComponentClassName="Lookup_ProductPacksTableAdapter" Name="Lookup_ProductPacks" UserDataComponentName="Lookup_ProductPacksTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TechProductsLtdConnectionString (Settings)" DbObjectName="Lookup_ProductPacks" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Lookup_ProductPacks` WHERE (((? = 1 AND `ID` IS NULL) OR (`ID` = ?)) AND (`Pack_code` = ?) AND ((? = 1 AND `Pack_Qty` IS NULL) OR (`Pack_Qty` = ?)) AND ((? = 1 AND `Pack_Discount` IS NULL) OR (`Pack_Discount` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Pack_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Pack_Qty" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Qty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Pack_Qty" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Qty" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Pack_Discount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Discount" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Pack_Discount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Discount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Lookup_ProductPacks` (`Pack_code`, `Pack_Qty`, `Pack_Discount`) VALUES (?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Pack_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Pack_Qty" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Qty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Pack_Discount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Discount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Pack_code, Pack_Qty, Pack_Discount FROM Lookup_ProductPacks</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Lookup_ProductPacks` SET `Pack_code` = ?, `Pack_Qty` = ?, `Pack_Discount` = ? WHERE (((? = 1 AND `ID` IS NULL) OR (`ID` = ?)) AND (`Pack_code` = ?) AND ((? = 1 AND `Pack_Qty` IS NULL) OR (`Pack_Qty` = ?)) AND ((? = 1 AND `Pack_Discount` IS NULL) OR (`Pack_Discount` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Pack_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Pack_Qty" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Qty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Pack_Discount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Discount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Pack_code" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Pack_Qty" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Qty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Pack_Qty" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Qty" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Pack_Discount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Discount" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Pack_Discount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Pack_Discount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Pack_code" DataSetColumn="Pack_code" />
+              <Mapping SourceColumn="Pack_Qty" DataSetColumn="Pack_Qty" />
+              <Mapping SourceColumn="Pack_Discount" DataSetColumn="Pack_Discount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TechProductsLtdDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TechProductsLtdDataSet" msprop:Generator_UserDSName="TechProductsLtdDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Fact_Orders_x0020_Query" msprop:Generator_TableClassName="Fact_Orders_QueryDataTable" msprop:Generator_TableVarName="tableFact_Orders_Query" msprop:Generator_RowChangedName="Fact_Orders_QueryRowChanged" msprop:Generator_TablePropName="Fact_Orders_Query" msprop:Generator_RowDeletingName="Fact_Orders_QueryRowDeleting" msprop:Generator_RowChangingName="Fact_Orders_QueryRowChanging" msprop:Generator_RowEvHandlerName="Fact_Orders_QueryRowChangeEventHandler" msprop:Generator_RowDeletedName="Fact_Orders_QueryRowDeleted" msprop:Generator_RowClassName="Fact_Orders_QueryRow" msprop:Generator_UserTableName="Fact_Orders Query" msprop:Generator_RowEvArgName="Fact_Orders_QueryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Cod_Customer" msprop:Generator_ColumnVarNameInTable="columnCod_Customer" msprop:Generator_ColumnPropNameInRow="Cod_Customer" msprop:Generator_ColumnPropNameInTable="Cod_CustomerColumn" msprop:Generator_UserColumnName="Cod_Customer" type="xs:int" minOccurs="0" />
+              <xs:element name="Orderdate" msprop:Generator_ColumnVarNameInTable="columnOrderdate" msprop:Generator_ColumnPropNameInRow="Orderdate" msprop:Generator_ColumnPropNameInTable="OrderdateColumn" msprop:Generator_UserColumnName="Orderdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Invoice_year" msprop:Generator_ColumnVarNameInTable="columnInvoice_year" msprop:Generator_ColumnPropNameInRow="Invoice_year" msprop:Generator_ColumnPropNameInTable="Invoice_yearColumn" msprop:Generator_UserColumnName="Invoice_year" type="xs:int" minOccurs="0" />
+              <xs:element name="Invoice_num" msprop:Generator_ColumnVarNameInTable="columnInvoice_num" msprop:Generator_ColumnPropNameInRow="Invoice_num" msprop:Generator_ColumnPropNameInTable="Invoice_numColumn" msprop:Generator_UserColumnName="Invoice_num" type="xs:int" minOccurs="0" />
+              <xs:element name="Product_code" msprop:Generator_ColumnVarNameInTable="columnProduct_code" msprop:Generator_ColumnPropNameInRow="Product_code" msprop:Generator_ColumnPropNameInTable="Product_codeColumn" msprop:Generator_UserColumnName="Product_code" type="xs:int" minOccurs="0" />
+              <xs:element name="Pack_code" msprop:Generator_ColumnVarNameInTable="columnPack_code" msprop:Generator_ColumnPropNameInRow="Pack_code" msprop:Generator_ColumnPropNameInTable="Pack_codeColumn" msprop:Generator_UserColumnName="Pack_code" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lookup_Customers" msprop:Generator_TableClassName="Lookup_CustomersDataTable" msprop:Generator_TableVarName="tableLookup_Customers" msprop:Generator_TablePropName="Lookup_Customers" msprop:Generator_RowDeletingName="Lookup_CustomersRowDeleting" msprop:Generator_RowChangingName="Lookup_CustomersRowChanging" msprop:Generator_RowEvHandlerName="Lookup_CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="Lookup_CustomersRowDeleted" msprop:Generator_UserTableName="Lookup_Customers" msprop:Generator_RowChangedName="Lookup_CustomersRowChanged" msprop:Generator_RowEvArgName="Lookup_CustomersRowChangeEvent" msprop:Generator_RowClassName="Lookup_CustomersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_Customer" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCod_Customer" msprop:Generator_ColumnPropNameInRow="Cod_Customer" msprop:Generator_ColumnPropNameInTable="Cod_CustomerColumn" msprop:Generator_UserColumnName="Cod_Customer" type="xs:int" />
+              <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Addr" msprop:Generator_ColumnVarNameInTable="columnAddr" msprop:Generator_ColumnPropNameInRow="Addr" msprop:Generator_ColumnPropNameInTable="AddrColumn" msprop:Generator_UserColumnName="Addr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Town" msprop:Generator_ColumnVarNameInTable="columnTown" msprop:Generator_ColumnPropNameInRow="Town" msprop:Generator_ColumnPropNameInTable="TownColumn" msprop:Generator_UserColumnName="Town" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="State_code" msprop:Generator_ColumnVarNameInTable="columnState_code" msprop:Generator_ColumnPropNameInRow="State_code" msprop:Generator_ColumnPropNameInTable="State_codeColumn" msprop:Generator_UserColumnName="State_code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="State_name" msprop:Generator_ColumnVarNameInTable="columnState_name" msprop:Generator_ColumnPropNameInRow="State_name" msprop:Generator_ColumnPropNameInTable="State_nameColumn" msprop:Generator_UserColumnName="State_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ZIP" msprop:Generator_ColumnVarNameInTable="columnZIP" msprop:Generator_ColumnPropNameInRow="ZIP" msprop:Generator_ColumnPropNameInTable="ZIPColumn" msprop:Generator_UserColumnName="ZIP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Country_code_A2" msprop:Generator_ColumnVarNameInTable="columnCountry_code_A2" msprop:Generator_ColumnPropNameInRow="Country_code_A2" msprop:Generator_ColumnPropNameInTable="Country_code_A2Column" msprop:Generator_UserColumnName="Country_code_A2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tel" msprop:Generator_ColumnVarNameInTable="columnTel" msprop:Generator_ColumnPropNameInRow="Tel" msprop:Generator_ColumnPropNameInTable="TelColumn" msprop:Generator_UserColumnName="Tel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company" msprop:Generator_ColumnVarNameInTable="columnCompany" msprop:Generator_ColumnPropNameInRow="Company" msprop:Generator_ColumnPropNameInTable="CompanyColumn" msprop:Generator_UserColumnName="Company" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Domain" msprop:Generator_ColumnVarNameInTable="columnDomain" msprop:Generator_ColumnPropNameInRow="Domain" msprop:Generator_ColumnPropNameInTable="DomainColumn" msprop:Generator_UserColumnName="Domain" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Discount_code" msprop:Generator_ColumnVarNameInTable="columnDiscount_code" msprop:Generator_ColumnPropNameInRow="Discount_code" msprop:Generator_ColumnPropNameInTable="Discount_codeColumn" msprop:Generator_UserColumnName="Discount_code" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lookup_Products" msprop:Generator_TableClassName="Lookup_ProductsDataTable" msprop:Generator_TableVarName="tableLookup_Products" msprop:Generator_TablePropName="Lookup_Products" msprop:Generator_RowDeletingName="Lookup_ProductsRowDeleting" msprop:Generator_RowChangingName="Lookup_ProductsRowChanging" msprop:Generator_RowEvHandlerName="Lookup_ProductsRowChangeEventHandler" msprop:Generator_RowDeletedName="Lookup_ProductsRowDeleted" msprop:Generator_UserTableName="Lookup_Products" msprop:Generator_RowChangedName="Lookup_ProductsRowChanged" msprop:Generator_RowEvArgName="Lookup_ProductsRowChangeEvent" msprop:Generator_RowClassName="Lookup_ProductsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Product_code" msprop:Generator_ColumnVarNameInTable="columnProduct_code" msprop:Generator_ColumnPropNameInRow="Product_code" msprop:Generator_ColumnPropNameInTable="Product_codeColumn" msprop:Generator_UserColumnName="Product_code" type="xs:int" />
+              <xs:element name="Product_desc" msprop:Generator_ColumnVarNameInTable="columnProduct_desc" msprop:Generator_ColumnPropNameInRow="Product_desc" msprop:Generator_ColumnPropNameInTable="Product_descColumn" msprop:Generator_UserColumnName="Product_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prod_type_code" msprop:Generator_ColumnVarNameInTable="columnProd_type_code" msprop:Generator_ColumnPropNameInRow="Prod_type_code" msprop:Generator_ColumnPropNameInTable="Prod_type_codeColumn" msprop:Generator_UserColumnName="Prod_type_code" type="xs:int" minOccurs="0" />
+              <xs:element name="Prod_List_price" msprop:Generator_ColumnVarNameInTable="columnProd_List_price" msprop:Generator_ColumnPropNameInRow="Prod_List_price" msprop:Generator_ColumnPropNameInTable="Prod_List_priceColumn" msprop:Generator_UserColumnName="Prod_List_price" type="xs:double" minOccurs="0" />
+              <xs:element name="InternalDesc" msprop:Generator_ColumnVarNameInTable="columnInternalDesc" msprop:Generator_ColumnPropNameInRow="InternalDesc" msprop:Generator_ColumnPropNameInTable="InternalDescColumn" msprop:Generator_UserColumnName="InternalDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Old" msprop:Generator_ColumnVarNameInTable="columnOld" msprop:Generator_ColumnPropNameInRow="Old" msprop:Generator_ColumnPropNameInTable="OldColumn" msprop:Generator_UserColumnName="Old" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lookup_ProductPacks" msprop:Generator_TableClassName="Lookup_ProductPacksDataTable" msprop:Generator_TableVarName="tableLookup_ProductPacks" msprop:Generator_TablePropName="Lookup_ProductPacks" msprop:Generator_RowDeletingName="Lookup_ProductPacksRowDeleting" msprop:Generator_RowChangingName="Lookup_ProductPacksRowChanging" msprop:Generator_RowEvHandlerName="Lookup_ProductPacksRowChangeEventHandler" msprop:Generator_RowDeletedName="Lookup_ProductPacksRowDeleted" msprop:Generator_UserTableName="Lookup_ProductPacks" msprop:Generator_RowChangedName="Lookup_ProductPacksRowChanged" msprop:Generator_RowEvArgName="Lookup_ProductPacksRowChangeEvent" msprop:Generator_RowClassName="Lookup_ProductPacksRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Pack_code" msprop:Generator_ColumnVarNameInTable="columnPack_code" msprop:Generator_ColumnPropNameInRow="Pack_code" msprop:Generator_ColumnPropNameInTable="Pack_codeColumn" msprop:Generator_UserColumnName="Pack_code" type="xs:int" />
+              <xs:element name="Pack_Qty" msprop:Generator_ColumnVarNameInTable="columnPack_Qty" msprop:Generator_ColumnPropNameInRow="Pack_Qty" msprop:Generator_ColumnPropNameInTable="Pack_QtyColumn" msprop:Generator_UserColumnName="Pack_Qty" type="xs:int" minOccurs="0" />
+              <xs:element name="Pack_Discount" msprop:Generator_ColumnVarNameInTable="columnPack_Discount" msprop:Generator_ColumnPropNameInRow="Pack_Discount" msprop:Generator_ColumnPropNameInTable="Pack_DiscountColumn" msprop:Generator_UserColumnName="Pack_Discount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lookup_Customers" />
+      <xs:field xpath="mstns:Cod_Customer" />
+    </xs:unique>
+    <xs:unique name="Lookup_Products_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lookup_Products" />
+      <xs:field xpath="mstns:Product_code" />
+    </xs:unique>
+    <xs:unique name="Lookup_ProductPacks_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lookup_ProductPacks" />
+      <xs:field xpath="mstns:Pack_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
