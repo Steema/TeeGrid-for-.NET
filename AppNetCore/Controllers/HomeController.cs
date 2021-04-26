@@ -4,22 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Steema.TeeGrid.Columns;
-using Steema.TeeGrid.Data.Strings;
-using Steema.TeeGrid.Painter;
 using TeeGridAspNetCore.Models;
-using Steema.TeeGrid.Extensions;
-using System.Runtime.Serialization;
 using System.Drawing;
-using System.Text;
 
 namespace TeeGridAspNetCore.Controllers
 {
-	public class MyDataTable
+    public class MyDataTable
 	{
 		private string _fruit;
 		private int _production;
