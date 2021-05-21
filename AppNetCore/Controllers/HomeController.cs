@@ -95,7 +95,7 @@ namespace TeeGridAspNetCore.Controllers
 				wGrid.Data = new Steema.TeeGrid.Data.Reflection.VirtualListData<THouse>(houses);
 
 				wGrid.Grid.Export.JSGrid.Width = "100%";
-				wGrid.Grid.Export.JSGrid.Height = "100%";
+				wGrid.Grid.Export.JSGrid.Height = "320px";
 				wGrid.Grid.Export.JSGrid.Paging = true;
 				string gridscript = wGrid.Grid.Export.JSGrid.AsString(false, true);
 
@@ -187,7 +187,7 @@ namespace TeeGridAspNetCore.Controllers
 
 				wGrid.DataSource = stronglyTyped;
 				wGrid.Grid.Export.JSGrid.Width = "100%";
-				wGrid.Grid.Export.JSGrid.Height = "100%";
+				wGrid.Grid.Export.JSGrid.Height = "320px";
 
 				string gridscript = wGrid.Grid.Export.JSGrid.AsString(false, true);
 
