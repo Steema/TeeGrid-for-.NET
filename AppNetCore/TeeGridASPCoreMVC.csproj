@@ -11,7 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Steema.TeeGrid.NETCore" Version="1.2020.1.13" />
+    <PackageReference Include="Steema.TeeGrid.NETCore" Version="1.2021.5.25" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
 
