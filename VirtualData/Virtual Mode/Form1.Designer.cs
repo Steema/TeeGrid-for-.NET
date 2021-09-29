@@ -28,42 +28,34 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			Steema.TeeGrid.WinForm.Painter.GdiPlusPainter gdiPlusPainter1 = new Steema.TeeGrid.WinForm.Painter.GdiPlusPainter();
-			Steema.TeeGrid.RowGroup.GridScrolling gridScrolling1 = new Steema.TeeGrid.RowGroup.GridScrolling();
-			this.teeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
-			this.SuspendLayout();
-			// 
-			// teeGrid1
-			// 
-			this.teeGrid1.BackColor = System.Drawing.Color.White;
-			this.teeGrid1.Data = null;
-			this.teeGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.teeGrid1.Location = new System.Drawing.Point(0, 0);
-			this.teeGrid1.Name = "teeGrid1";
-			this.teeGrid1.Painter = gdiPlusPainter1;
-			gridScrolling1.Horizontal = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
-			gridScrolling1.Mode = Steema.TeeGrid.RowGroup.ScrollingMode.Touch;
-			gridScrolling1.Vertical = Steema.TeeGrid.RowGroup.ScrollDirection.Normal;
-			this.teeGrid1.Scrolling = gridScrolling1;
-			this.teeGrid1.Size = new System.Drawing.Size(692, 484);
-			this.teeGrid1.TabIndex = 0;
-			this.teeGrid1.Text = "teeGrid1";
-			// 
-			// Form1
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(692, 484);
-			this.Controls.Add(this.teeGrid1);
-			this.Name = "Form1";
-			this.Text = "Form1";
-			this.ResumeLayout(false);
+      this.teeGrid1 = new Steema.TeeGrid.WinForm.TGrid();
+      this.SuspendLayout();
+      // 
+      // teeGrid1
+      // 
+      this.teeGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.teeGrid1.Location = new System.Drawing.Point(0, 0);
+      this.teeGrid1.Name = "teeGrid1";
+      this.teeGrid1.Selected.ScrollToView = false;
+      this.teeGrid1.Size = new System.Drawing.Size(692, 484);
+      this.teeGrid1.TabIndex = 0;
+      this.teeGrid1.Text = "tGrid1";
+      // 
+      // Form1
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.ClientSize = new System.Drawing.Size(692, 484);
+      this.Controls.Add(this.teeGrid1);
+      this.Name = "Form1";
+      this.Text = "Form1";
+      this.ResumeLayout(false);
 
 		}
 
-		#endregion
+    #endregion
 
-		private Steema.TeeGrid.WinForm.TGrid teeGrid1;
-	}
+    private Steema.TeeGrid.WinForm.TGrid teeGrid1;
+  }
 }
 

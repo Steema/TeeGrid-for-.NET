@@ -1,98 +1,87 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Steema.TeeGrid.Data.Strings;
+using Steema.TeeGrid.WinForm.Editors;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using Steema.TeeGrid.Data.Strings;
 
 namespace TeeGrid_VirtuaMode
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
-			InitializeComponent();
+  public partial class Form1 : Form
+  {
+    public Form1()
+    {
+      InitializeComponent();
 
-			this.BackColor = Color.White;
-			Steema.TeeGrid.Themes.GridThemes.DarkFlat.ApplyTo(teeGrid1.Grid);
-	
-
-			// Important:
-			// Passing an optional default column width (60) means the grid will not need
-			// to calculate it, which is much faster.
-
-			// Create data, with 10 columns, lots of rows, (optionally: a default column width = 60)
-			data = new VirtualModeData(10, 20000, 60);
-
-			for (int i = 0; i < data.Columns; i++)
-			{
-				data.Headers[i] = i.ToString();
-			}
-
-			data.OnGetValue += GetCell;
-			data.OnSetValue += SetCell;
-
-			teeGrid1.Data = data;
-
-            teeGrid1.Columns[4].OnPaint += Column_OnPaint;
-
-           // teeGrid1.Columns[7].OnPaint += Column_OnPaint;
+      BackColor = Color.White;
+      Steema.TeeGrid.Themes.GridThemes.DarkFlat.ApplyTo(teeGrid1.Grid);
 
 
-        }
+      // Important:
+      // Passing an optional default column width (60) means the grid will not need
+      // to calculate it, which is much faster.
 
-        private static EventHandler<EventArgs> eventType;
+      // Create data, with 10 columns, lots of rows, (optionally: a default column width = 60)
+      data = new VirtualModeData(10, 20000, 60);
 
-        Steema.TeeGrid.Format.Format customFormat = new Steema.TeeGrid.Format.Format(eventType);
-        Steema.TeeGrid.Format.TextFormat custTextFormat = new Steema.TeeGrid.Format.TextFormat(eventType);
+      for (int i = 0; i < data.Columns; i++)
+      {
+        data.Headers[i] = i.ToString();
+      }
 
-        private void Column_OnPaint(object sender, Steema.TeeGrid.Columns.ColumnPaintEventArgs e)
-        {
-            if (e.AData.Row == 3)
-            {
-                customFormat.Brush.Color = Color.Beige;
-                e.AData.Painter.Paint(customFormat, e.AData.Bounds);
+      data.OnGetValue += GetCell;
+      data.OnSetValue += SetCell;
 
-                //no text
-            }
-            else if (e.AData.Row == 7)
-            {
-                Steema.TeeGrid.Format.Font oldFont = ((Steema.TeeGrid.Columns.Column)(sender)).Format.Font;
+      teeGrid1.Data = data;
 
-                customFormat.Stroke.Color = Color.Red;
-                e.AData.Painter.Paint(customFormat, e.AData.Bounds); //brush already set
+      teeGrid1.Columns[2].ParentFormat = false;
+      teeGrid1.Columns[2].Format.Brush.Color = Color.LightSeaGreen;
+      teeGrid1.Columns[2].Format.Brush.Show();
 
-                Steema.TeeGrid.Format.Font customFont = new Steema.TeeGrid.Format.Font(eventType);
 
-                customFont.Color = Color.Blue;
-                customFont.Size = 15;
+      var row = teeGrid1.Rows.Items.AddRow(4);
+      row.Format.Brush.Color = Color.CornflowerBlue;
+      row.Format.Brush.Show();
 
-                custTextFormat.Font = customFont;
+      //or
+      teeGrid1.Rows.Items[2].Format.Brush.Show();
+      teeGrid1.Rows.Items[2].Format.Brush.Color = Color.LightGoldenrodYellow;
+      teeGrid1.Rows.Items[2].Format.Stroke.Color = Color.Fuchsia;
+      teeGrid1.Rows.Items[2].Format.Stroke.Show();
+      teeGrid1.Rows.Items[2].Format.Font.Color = Color.Red;
+      teeGrid1.Rows.Items[2].Format.Font.Style = Steema.TeeGrid.Format.FontStyle.Strikeout;
 
-                e.AData.Painter.SetFont(customFont);
+      teeGrid1.Rows.Items[3000].Format.Brush.Color = Color.CornflowerBlue;
+      teeGrid1.Rows.Items[3000].Format.Brush.Show();
 
-                ((Steema.TeeGrid.Renders.Render)((Steema.TeeGrid.Columns.Column)(sender)).Render).Paint(e.AData);
 
-                e.AData.Painter.SetFont(oldFont);
-            }
-            else
-                ((Steema.TeeGrid.Renders.Render)((Steema.TeeGrid.Columns.Column)(sender)).Render).Paint(e.AData);
-        }
+      var cell = teeGrid1.CellFormat.AddCell(10, teeGrid1.Columns["6"].Index);
+      cell.Format.Font.Style = Steema.TeeGrid.Format.FontStyle.Bold;
+      cell.Format.Brush.Color = Color.HotPink;
+      cell.Format.Brush.Show();
 
-        private void SetCell(object sender, VirtualDataEventArgs e)
-		{
-			// Called when the cell has been manually edited, or when a Data cell is changed.
-			// Store the new e.Value in your real data
-		}
+      //or
+      teeGrid1.CellFormat[10, 8].Format.Brush.Color = Color.PaleGoldenrod;
+      teeGrid1.CellFormat[10, 8].Format.Brush.Show();
 
-		private void GetCell(object sender, VirtualDataEventArgs e)
-		{
-			e.Value = data.IndexOf(e.Column) + " x " + e.Row; 
-		}
+      teeGrid1.Rows.Items[10].Format.Brush.Show();
+      teeGrid1.Rows.Items[10].Format.Brush.Color = Color.CornflowerBlue;
+      teeGrid1.Rows.Items[10].Format.Font.Color = Color.Red;
+      teeGrid1.Rows.Items[10].Format.Font.Style = Steema.TeeGrid.Format.FontStyle.Strikeout;
 
-		private VirtualModeData data;
-	}
+    }
+
+
+    private void SetCell(object sender, VirtualDataEventArgs e)
+    {
+      // Called when the cell has been manually edited, or when a Data cell is changed.
+      // Store the new e.Value in your real data
+    }
+
+    private void GetCell(object sender, VirtualDataEventArgs e)
+    {
+      e.Value = data.IndexOf(e.Column) + " x " + e.Row;
+    }
+
+    private readonly VirtualModeData data;
+  }
 }
