@@ -44,8 +44,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TeeGrid.WinForm, Version=1.2021.5.25, Culture=neutral, PublicKeyToken=cc97f2073aa08b08, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Steema.TeeGrid.NET.1.2021.5.25\lib\net\TeeGrid.WinForm.dll</HintPath>
+    <Reference Include="TeeGrid.WinForm, Version=1.2021.9.28, Culture=neutral, PublicKeyToken=cc97f2073aa08b08, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Steema.TeeGrid.NET.1.2021.9.28\lib\net\TeeGrid.WinForm.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
